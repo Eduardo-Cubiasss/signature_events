@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login administrador</title>
+    <link rel="stylesheet" type="text/css" href="../../resources/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../../resources/css/fontawesome-all.min.css">
+    <link rel="stylesheet" type="text/css" href="../../resources/css/iofrm-style.css">
+    <link rel="stylesheet" type="text/css" href="../../resources/css/iofrm-theme_admin.css">
+    <link rel="icon" href="../../resources/img/logo_reducido.ico" type="image/x-icon">
+</head>
+<body>
+    <div class="form-body">
+        <div class="iofrm-layout">
+            <div class="img-holder">
+                <div class="bg"></div>
+                <div class="info-holder">
+                    <img src="../../resources/images/logo_reducido.png" alt="">
+                </div>
+            </div>
+            <div class="form-holder">
+                <div class="form-content">
+                    <div class="form-items with-bg">
+                        <div class="website-logo-inside logo-normal">
+                                <div class="logo">
+                                    <img src="../../resources/images/logo_reducido.png" alt="">
+                                </div>
+                        </div>
+                        <h3 class="font-md">Bienvenido administrad@r.</h3>
+                        <p>Administra cuentas, optimiza procesos.</p>
+                        <form id="sessionForm">
+                            <input class="form-control" type="text" name="alias" placeholder="Usuario" required>
+                            <input class="form-control" type="password" name="clave" placeholder="Contraseña" required>
+                            <div class="form-button d-flex">
+                                <button id="submit" type="submit" class="btn btn-primary">Iniciar sesión</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+<script src="../../resources/js/jquery.min.js"></script>
+<script src="../../resources/js/popper.min.js"></script>
+<script src="../../resources/js/bootstrap.bundle.min.js"></script>
+<script src="../../resources/js/main.js"></script>
+<script type="text/javascript" src="../../resources/js/sweetalert.min.js"></script>
+    <!-- Llamada al controlador general de la aplicación -->
+    <script type="text/javascript" src="../../controllers/utils/components.js"></script>
+    <!-- Llamada al controlador del sitio público -->
+    <script type="text/javascript" src="../../controllers/utils/admin.js"></script>
+<script src="../../controllers/admin/index.js"></script>
+</body>
+</html>

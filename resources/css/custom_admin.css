@@ -1,0 +1,55 @@
+#hero {
+    background-image: url("../images/bg-hero.jpg")
+}
+
+#the-wedding-event {
+    background-image: url("../images/bg-the-wedding-event.jpg")
+}
+
+#proposed {
+    background-image: url("../images/bg-proposed.jpg")
+}
+
+#wedding-gifts {
+    background-image: url("../images/bg-wedding-gifts.jpg")
+}
+
+footer {
+    background-image: url("../images/bg-footer.jpg")
+}
+
+#countdown-container {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+    height: 30vh;
+    background-color: #ae9073;
+    color: white;
+    text-align: center;
+}
+
+#days, #hours, #minutes, #seconds {
+    background-color: black;
+    padding: 20px;
+    border-radius: 8px;
+    width: 80px;
+    font-size: 2rem;
+    font-weight: bold;
+    display: block;
+}
+
+#days small, #hours small, #minutes small, #seconds small {
+    font-size: 0.9rem;
+    color: #aaa;
+}
+
+/* Responsivo */
+@media (max-width: 500px) {
+    #countdown-container {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+/*# sourceMappingURL=custom.min.css.map */

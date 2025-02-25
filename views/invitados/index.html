@@ -1,0 +1,887 @@
+<!doctype html>
+<html lang="en" class="h-100 w-100">
+
+<head>
+    <title>Carta de invitación</title>
+
+    <link rel="preload" href="css/style.min.css" as="style">
+    <link rel="preload" href="js/script.min.js" as="script">
+    <link rel="icon" href="img/logo_reducido.ico" type="image/x-icon">
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+
+    <!-- Required CSS files -->
+    <link href="css/style.min.css" rel="stylesheet">
+    <link href="css/custom.css" rel="stylesheet">
+
+</head>
+
+<body id="page-top" class="h-100 w-100">
+
+    <!-- Preloader Start -->
+    <div class="preloader bg-white h-100 position-fixed w-100">
+        <svg width="100px" height="100px" viewBox="0 0 100 100" y="0px" x="0px"
+            class="position-absolute start-50 top-50 translate-middle">
+            <g>
+                <path class="path-heart"
+                    d="M89.49,37.8c0,25.54-39.59,46.24-39.59,46.24S10.31,63.34,10.31,37.8c0-29.59,39.59-28.67,39.59,0C49.9,10.06,89.49,8.21,89.49,37.8 z"
+                    stroke-miterlimit="10" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.5"
+                    stroke="#000000" fill="#e8ede6"></path>
+                <path class="path-heart-sm"
+                    d="M89.63,70.9c-3.57,10.15-22.21,12.84-22.21,12.84s-12.84-13.77-9.26-23.92c4.14-11.76,19.75-5.86,15.74,5.54 C77.78,54.33,93.78,59.13,89.63,70.9z"
+                    stroke-miterlimit="10" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.5"
+                    stroke="#000000" fill="#6d8a91"></path>
+            </g>
+        </svg>
+    </div>
+    <!-- Preloader End -->
+
+
+    <!-- Header Start -->
+    <header class="fixed-top">
+        <nav class="navbar navbar-expand-lg p-0">
+            <div class="container">
+                <!-- Navbar brand (mobile) -->
+                <div class="navbar-brand align-items-center d-flex d-lg-none me-0">
+                    <img width="166" height="60" src="images/logo_reducido.png" alt="Logo">
+                </div>
+
+                <!-- Navbar toggler -->
+                <button class="navbar-toggler bg-secondary" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Navbar menu -->
+                <div id="navbar" class="collapse navbar-collapse justify-content-lg-center">
+                    <ul class="navbar-nav pt-3 pt-lg-0">
+                        <li class="nav-item me-3">
+                            <a class="nav-link page-scroll" href="#the-couple">Prometido/as</a>
+                        </li>
+                        <li class="nav-item me-3">
+                            <a class="nav-link page-scroll" href="#the-wedding-event">Eventos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link page-scroll" href="#love-story">Historia de amor</a>
+                        </li>
+                    </ul>
+
+                    <!-- Navbar brand (desktop) -->
+                    <div class="navbar-brand d-none d-lg-block mx-3 mx-xl-5 text-center">
+                        <img width="218" height="117" src="images/logo_largo.png" alt="Logo">
+                    </div>
+
+                    <ul class="navbar-nav">
+                        <li class="nav-item me-3">
+                            <a class="nav-link page-scroll" href="#photos">Fotos</a>
+                        </li>
+                        <li class="nav-item me-3">
+                            <a class="nav-link page-scroll" href="#wedding-gifts">Regalos de boda</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link page-scroll" href="#rsvp">Confirma ya</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- //.collapse -->
+            </div>
+            <!-- //.container -->
+        </nav>
+    </header>
+    <!-- Header End -->
+
+
+    <!-- Spacer -->
+    <span class="spacer d-block w-100"></span>
+
+
+    <!-- Section - Hero Start -->
+    <section id="hero" class="bg-img-cover bg-overlay position-relative">
+        <div class="container">
+            <div class="row g-0 justify-content-center justify-content-lg-start">
+                <div class="col-md-9 col-lg-6 col-xl-5 bg-white px-4 py-5 position-relative rounded shadow">
+                    <h5 class="font-alt fw-bold lh-1 mb-3 text-center">¡Nuestra boda!</h5>
+                    <span class="section-divider divider-secondary"></span>
+
+                    <div class="img-clip-path clip-hero position-relative">
+                        <img src="images/the-couple-hero.jpg" alt="" class="img-fluid">
+                    </div>
+                    <!-- //.img-clip-path -->
+
+                    <div class="align-items-center d-flex justify-content-center mb-2">
+                        <h2 class="font-alt fw-bold m-0">Milea</h2>
+                        <span class="icon-svg icon-svg-lg mx-2"><img src="img/icon-wedding-ampersand.svg" alt=""></span>
+                        <h2 class="font-alt fw-bold m-0">Dilan</h2>
+                    </div>
+                    <!-- //.align-items-center -->
+
+                    <p class="fs-5 text-center text-muted">Nos complace invitarte <p id="nombreInvitadotxt"></p> a nuestra ceremonia de boda y
+                        posterior fiesta.</p>
+
+                    <!-- Ornament -->
+                    <img width="100" src="img/ornament-divider.png" alt="" class="d-block mx-auto">
+                    <span class="ornament-corner ornament-primary ornament-top"></span>
+                    <span class="ornament-corner ornament-primary"></span>
+                </div>
+                <!-- //.col-md-9 -->
+            </div>
+            <!-- //.row -->
+        </div>
+        <!-- //.container -->
+    </section>
+    <!-- Section - Hero End -->
+
+
+    <!-- Section - The Couple Start -->
+    <section id="the-couple">
+        <div class="container">
+            <div class="row mb-5 pb-lg-5">
+                <div class="col-12 text-center">
+                    <iframe style="border-radius:12px"
+                        src="https://open.spotify.com/embed/track/3lGPy4laQ3s4lT1pRXKmFC?utm_source=generator&theme=0"
+                        width="100%" height="152" frameBorder="0" allowfullscreen=""
+                        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                        loading="lazy"></iframe>
+                    <span class="section-divider divider-primary"></span>
+                </div>
+                <!-- //.col-12 -->
+            </div>
+            <div class="row mb-5 pb-lg-5">
+                <div class="col-12 text-center">
+                    <h2 class="font-alt fs-3 fw-bold text-uppercase">Un poco de nosotros</h2>
+                    <p class="font-alt fs-5 fst-italic text-muted">En el amor verdadero, no se trata de encontrar a
+                        alguien perfecto, sino de encontrar a alguien con quien compartir imperfecciones y, aun así,
+                        sentir que el mundo está completo.
+                    </p>
+                    <span class="section-divider divider-primary"></span>
+                </div>
+                <!-- //.col-12 -->
+            </div>
+            <!-- //.row -->
+
+            <div class="row justify-content-center">
+
+                <!-- The Bride -->
+                <div class="col-lg-6 mb-5 mb-lg-0">
+                    <div class="row align-items-center">
+                        <div class="col-md-6">
+                            <div class="bg-white border mb-3 mb-md-0 p-2 position-relative">
+                                <img class="img-fluid" src="images/the-couple-1.jpg" alt="">
+                                <span
+                                    class="bg-secondary bottom-0 end-0 font-alt fst-italic m-3 position-absolute px-3 py-2 rounded text-white">La
+                                    novia</span>
+                            </div>
+                            <!-- //.bg-white -->
+                        </div>
+                        <!-- //.col-md-6 -->
+
+                        <div class="col-md-6 text-center text-md-start">
+                            <h5 class="font-alt fw-bold text-uppercase">Jane Milea</h5>
+                            <p class="font-alt fst-italic text-muted">Para mi sol</p>
+                            <hr class="border-secondary mx-auto mx-md-0 sep-line">
+                            <p class="m-0">Estoy loco por Dilan. Tiene un corazón verdaderamente increíble. Soy tan
+                                increíblemente bendecida y emocionada de pasar todos los días con él, el resto de mi
+                                vida con mi mejor amigo.</p>
+                        </div>
+                        <!-- //.col-md-6 -->
+                    </div>
+                    <!-- //.row -->
+                </div>
+                <!-- //.col-lg-6 -->
+
+
+                <!-- The Groom -->
+                <div class="col-lg-6">
+                    <div class="row align-items-center">
+                        <div class="col-md-6">
+                            <div class="bg-white border mb-3 mb-md-0 p-2 position-relative">
+                                <img class="img-fluid" src="images/the-couple-2.jpg" alt="">
+                                <span
+                                    class="bg-secondary bottom-0 end-0 font-alt fst-italic m-3 position-absolute px-3 py-2 rounded text-white">El
+                                    novio</span>
+                            </div>
+                            <!-- //.bg-white -->
+                        </div>
+                        <!-- //.col-md-6 -->
+
+                        <div class="col-md-6 text-center text-md-start">
+                            <h5 class="font-alt fw-bold text-uppercase">John Dilan</h5>
+                            <p class="font-alt fst-italic text-muted">Para mi princesa con ojos de cristal</p>
+                            <hr class="border-secondary mx-auto mx-md-0 sep-line">
+                            <p class="m-0">Milea significa mucho para mí y no puedo creer que realmente se vaya conmigo.
+                                Estoy muy emocionado de pasar el resto de mi vida con ella. Milea es perfecta para mí.
+                            </p>
+                        </div>
+                        <!-- //.col-md-6 -->
+                    </div>
+                    <!-- //.row -->
+                </div>
+                <!-- //.col-lg-6 -->
+            </div>
+            <!-- //.row -->
+        </div>
+        <!-- //.container -->
+    </section>
+    <!-- Section - The Couple End -->
+
+
+    <!-- Section - The Wedding Event Start -->
+    <section id="the-wedding-event" class="bg-img-cover bg-overlay position-relative">
+        <div class="container position-relative">
+            <div class="row mb-5 pb-lg-5">
+                <div class="col-12 text-center">
+                    <h2 class="font-alt fs-3 fw-bold text-uppercase text-light">Eventos</h2>
+                    <p class="font-alt fs-5 fst-italic text-light">Si solo tienes una sonrisa, dásela a la gente que
+                        amas.</p>
+                    <span class="section-divider divider-secondary"></span>
+                </div>
+                <!-- //.col-12 -->
+            </div>
+            <!-- //.row -->
+
+            <div class="row gx-lg-5 justify-content-center">
+                <div class="col-md-9 col-lg-6 col-xl-5 mb-5 mb-lg-0">
+                    <div class="bg-white h-100 p-5 rounded shadow">
+                        <h3 class="font-alt fs-4 fw-bold text-uppercase">La ceremonia</h3>
+                        <hr class="border-secondary sep-line">
+                        <p class="mb-4" id="descripcion_ceremonia_txt">La cereminia tendrá lugar en la hermosa y elegante iglesia Monte Cristo, tu
+                            presencia será apreciada, por favor llega 10 minutos antes que inicie la ceremonia, viste
+                            comodamente con tonalidades frios, no blanco ni azul.
+                        </p>
+
+                        <div class="align-items-center d-flex mb-3">
+                            <span class="icon-svg me-4"><img src="img/icon-wedding-calendar.svg" alt=""></span>
+                            <span>
+                                <p id="fecha_ceremonia">Miercoles - Marzo 5, 2025</p><br>
+                                <p id="hora_ceremonia">17:00pm - 19:00pm</p>
+                            </span>
+                        </div>
+                        <!-- //.align-items-center -->
+
+                        <div class="align-items-center d-flex mb-4">
+                            <span class="icon-svg me-4"><img src="img/icon-wedding-arch.svg" alt=""></span>
+                            <span>Iglesia Monte Cristo<br>
+                                Dirección: Calle 1234, Ciudad de México
+                            </span>
+                        </div>
+                        <!-- //.align-items-center -->
+
+                        <div class="d-flex">
+                            <button type="button" data-bs-toggle="modal" data-bs-target="#how-to-get-there-modal"
+                                class="btn fs-9 ls-1 me-3">Ver mapa</button>
+                            <button type="submit"
+                                class="bg-secondary border-secondary btn font-alt fs-9 rounded text-center text-white shadow"
+                                onclick="descargarICS()">
+                                Agregar a calendario
+                            </button>
+                        </div>
+                        <!-- //.d-flex -->
+                    </div>
+                    <!-- //.bg-white -->
+                </div>
+                <!-- //.col-md-9 -->
+
+                <div class="col-md-9 col-lg-6 col-xl-5">
+                    <div class="bg-white h-100 p-5 rounded shadow">
+                        <h3 class="font-alt fs-4 fw-bold text-uppercase">La fiesta</h3>
+                        <hr class="border-secondary sep-line">
+                        <p class="mb-4"id="descripcion_fiesta_txt"> Nos enamoramos del salón de baile dentro de este histórico hotel por su grandeza
+                            y elegancia atemporal. ¡No podemos esperar para festejar toda la noche contigo!</p>
+
+                        <div class="align-items-center d-flex mb-3">
+                            <span class="icon-svg me-4"><img src="img/icon-wedding-calendar.svg" alt=""></span>
+                            <span>
+                                <p id="fecha_fiesta">Miercoles - Marzo 5, 2025</p><br>
+                                <p id="hora_fiesta">17:00pm - 19:00pm</p>
+                            </span>
+                        </div>
+                        <!-- //.align-items-center -->
+
+                        <div class="align-items-center d-flex mb-4">
+                            <span class="icon-svg me-4"><img src="img/icon-wedding-cake.svg" alt=""></span>
+                            <span>The Mayflower Hotel<br>
+                                Dirección: Calle 5678, Ciudad de México
+                            </span>
+                        </div>
+                        <!-- //.align-items-center -->
+                        <div class="d-flex">
+                            <button type="button" data-bs-toggle="modal" data-bs-target="#how-to-get-there-modal"
+                                class="btn fs-9 ls-1 me-3">Ver mapa</button>
+
+                            <button type="submit"
+                                class="bg-secondary border-secondary btn font-alt fs-9 rounded text-center text-white shadow"
+                                onclick="descargarICS()">
+                                Agregar a calendario
+                            </button>
+                        </div>
+                        <!-- //.d-flex -->
+                    </div>
+                    <!-- //.bg-white -->
+                </div>
+                <!-- //.col-md-9 -->
+            </div>
+            <!-- //.row -->
+        </div>
+        <!-- //.container -->
+
+        <!-- Modal - How to Get There Start -->
+        <div id="how-to-get-there-modal" class="modal fade" tabindex="-1">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content rounded">
+                    <div class="modal-header justify-content-center">
+                        <h3 class="modal-title fs-4 font-alt fw-bold text-uppercase">Eventos</h3>
+                        <button type="button" class="end-0  fs-3 me-3 position-absolute" data-bs-dismiss="modal"
+                            aria-label="Close">
+                            <span aria-hidden="true">×</span>
+                        </button>
+                    </div>
+                    <!-- //.modal-header -->
+
+                    <div class="modal-body p-lg-4">
+                        <div class="row">
+                            <div class="col-lg-6 mb-5 mb-lg-0">
+                                <div class="mb-4 text-center">
+                                    <h4 class="font-alt fs-5 fw-bold text-primary text-uppercase">La ceremonia</h4>
+                                    <p class="font-alt fst-italic text-muted">(Iglesia Monte Cristo)</p>
+                                    <iframe class="img-fluid px-2"
+                                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3773522.3786917008!2d-102.3394573316665!3d22.538658982442335!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1ff2b77b58d11%3A0x32bcddc9490abee5!2sArquidi%C3%B3cesis%20Primada%20de%20M%C3%A9xico!5e0!3m2!1sen!2ses!4v1740219082059!5m2!1sen!2ses"
+                                        width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+                                        referrerpolicy="no-referrer-when-downgrade" id="lugar_ceremonia"></iframe>
+                                    <img src="images/the-wedding-event-modal-1.jpg" alt="" class="img-fluid rounded">
+                                </div>
+                                <!-- //.mb-4 -->
+                            </div>
+                            <!-- //.col-lg-6 -->
+
+                            <div class="col-lg-6">
+                                <div class="mb-4 text-center">
+                                    <h4 class="font-alt fs-5 fw-bold text-primary text-uppercase">La fiesta</h4>
+                                    <p class="font-alt fst-italic text-muted">(The Mayflower Hotel)</p>
+                                    <iframe class="img-fluid px-2"
+                                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3104.8463883915674!2d-77.04247442437615!3d38.90462794627804!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89b7b7b8d962b239%3A0x2f4203e755fa6b14!2sThe%20Mayflower%20Hotel%2C%20Autograph%20Collection!5e0!3m2!1sen!2ses!4v1740218940027!5m2!1sen!2ses"
+                                        width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+                                        referrerpolicy="no-referrer-when-downgrade" id="lugar_ceremonia"></iframe>
+                                    <img src="images/the-wedding-event-modal-2.jpg" alt="" class="img-fluid rounded">
+                                </div>
+
+                            </div>
+                        </div>
+                        <!-- //.row -->
+                    </div>
+                    <!-- //.modal-body -->
+
+                    <div class="modal-footer d-sm-none">
+                        <button class="btn fs-9 w-100" data-bs-dismiss="modal" aria-label="Close">¡Sé cómo ir!</button>
+                    </div>
+                    <!-- //.modal-footer -->
+                </div>
+                <!-- //.modal-content -->
+            </div>
+            <!-- //.modal-dialog -->
+        </div>
+        <!-- Modal - How to Get There End -->
+
+    </section>
+    <!-- Section - The Wedding Event End -->
+
+    <!-- //.col-lg-6 -->
+    <div class="col-12 text-center">
+        <div id="countdown-container" class="d-flex justify-content-center align-items-center">
+            <div class="time-box">
+                <span id="days" class="counter-box">00</span>
+                <small>Días</small>
+            </div>
+            <div class="time-box">
+                <span id="hours" class="counter-box">00</span>
+                <small>Horas</small>
+            </div>
+            <div class="time-box">
+                <span id="minutes" class="counter-box">00</span>
+                <small>Minutos</small>
+            </div>
+            <div class="time-box">
+                <span id="seconds" class="counter-box">00</span>
+                <small>Segundos</small>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Section - Love Story Start -->
+    <section id="love-story">
+        <div class="container">
+            <div class="row mb-5 pb-lg-5">
+                <div class="col-12 text-center">
+                    <h2 class="font-alt fs-3 fw-bold text-uppercase">Nuestra Historia de Amor</h2>
+                    <p class="font-alt fs-5 fst-italic text-muted">Solo hay una felicidad en esta vida, amar y ser
+                        amado.</p>
+                    <span class="section-divider divider-primary"></span>
+                </div>
+                <!-- //.col-12 -->
+            </div>
+            <!-- //.row -->
+
+            <div class="row">
+                <div id="carousel-love-story" class="carousel mb-4">
+                    <div
+                        class="carousel-cell align-items-center g-0 justify-content-center justify-content-lg-between row">
+                        <div class="col-md-8 col-lg-5 mb-5 mb-lg-0">
+                            <div class="img-clip-path clip-love-story position-relative">
+                                <img src="images/love-story-1.jpg" alt="" class="img-fluid">
+                            </div>
+                            <!-- //.img-clip-path -->
+                        </div>
+                        <!-- //.col-md-8 -->
+
+                        <div class="col-lg-6 text-center text-lg-start">
+                            <h4 class="font-alt">First Meet Each Other</h4>
+                            <hr class="border-secondary mx-auto mx-lg-0 sep-line">
+                            <p>Milea and Dilan met the modern way: by swiping right on Tinder in 2021. Their first date
+                                was a bit of a disaster-it started pouring while they were enjoying their outdoor
+                                dinner, Dilan fell into a mud puddle, and they had to wait over an hour for a subway
+                                train. However, their second date went much better and they've been together ever since.
+                            </p>
+                            <p class="m-0">There are many variations of passages of Lorem Ipsum available, but the
+                                majority have suffered alteration in some form, by injected humour, or randomised words
+                                which don't look even slightly believable.</p>
+                        </div>
+                        <!-- //.col-lg-6 -->
+                    </div>
+                    <!-- //.carousel-cell -->
+
+                    <div
+                        class="carousel-cell align-items-center g-0 justify-content-center justify-content-lg-between row">
+                        <div class="col-md-8 col-lg-5 mb-5 mb-lg-0">
+                            <div class="img-clip-path clip-love-story position-relative">
+                                <img src="images/love-story-2.jpg" alt="" class="img-fluid">
+                            </div>
+                            <!-- //.img-clip-path -->
+                        </div>
+                        <!-- //.col-md-8 -->
+
+                        <div class="col-lg-6 text-center text-lg-start">
+                            <h4 class="font-alt">When We Go Out Together</h4>
+                            <hr class="border-secondary mx-auto mx-lg-0 sep-line">
+                            <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an
+                                unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                            <p class="m-0">There are many variations of passages of Lorem Ipsum available, but the
+                                majority have suffered alteration in some form, by injected humour, or randomised words
+                                which don't look even slightly believable. If you are going to use a passage of Lorem
+                                Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of
+                                text.</p>
+                        </div>
+                        <!-- //.col-lg-6 -->
+                    </div>
+                    <!-- //.carousel-cell -->
+
+                    <div
+                        class="carousel-cell align-items-center g-0 justify-content-center justify-content-lg-between row">
+                        <div class="col-md-8 col-lg-5 mb-5 mb-lg-0">
+                            <div class="img-clip-path clip-love-story position-relative">
+                                <img src="images/love-story-3.jpg" alt="" class="img-fluid">
+                            </div>
+                            <!-- //.img-clip-path -->
+                        </div>
+                        <!-- //.col-md-8 -->
+
+                        <div class="col-lg-6 text-center text-lg-start">
+                            <h4 class="font-alt">Have a Lovely Time</h4>
+                            <hr class="border-secondary mx-auto mx-lg-0 sep-line">
+                            <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an
+                                unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                            <p class="m-0">There are many variations of passages of Lorem Ipsum available, but the
+                                majority have suffered alteration in some form, by injected humour, or randomised words
+                                which don't look even slightly believable. If you are going to use a passage of Lorem
+                                Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of
+                                text.</p>
+                        </div>
+                        <!-- //.col-lg-6 -->
+                    </div>
+                    <!-- //.carousel-cell -->
+
+                    <div
+                        class="carousel-cell align-items-center g-0 justify-content-center justify-content-lg-between row">
+                        <div class="col-md-8 col-lg-5 mb-5 mb-lg-0">
+                            <div class="img-clip-path clip-love-story position-relative">
+                                <img src="images/love-story-4.jpg" alt="" class="img-fluid">
+                            </div>
+                            <!-- //.img-clip-path -->
+                        </div>
+                        <!-- //.col-md-8 -->
+
+                        <div class="col-lg-6 text-center text-lg-start">
+                            <h4 class="font-alt">We Fall in Love Each Other</h4>
+                            <hr class="border-secondary mx-auto mx-lg-0 sep-line">
+                            <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an
+                                unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                            <p class="m-0">There are many variations of passages of Lorem Ipsum available, but the
+                                majority have suffered alteration in some form, by injected humour, or randomised words
+                                which don't look even slightly believable. If you are going to use a passage of Lorem
+                                Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of
+                                text.</p>
+                        </div>
+                        <!-- //.col-lg-6 -->
+                    </div>
+                    <!-- //.carousel-cell -->
+
+                    <div
+                        class="carousel-cell align-items-center g-0 justify-content-center justify-content-lg-between row">
+                        <div class="col-md-8 col-lg-5 mb-5 mb-lg-0">
+                            <div class="img-clip-path clip-love-story position-relative">
+                                <img src="images/love-story-5.jpg" alt="" class="img-fluid">
+                            </div>
+                            <!-- //.img-clip-path -->
+                        </div>
+                        <!-- //.col-md-8 -->
+
+                        <div class="col-lg-6 text-center text-lg-start">
+                            <h4 class="font-alt">We Decide to Live Together</h4>
+                            <hr class="border-secondary mx-auto mx-lg-0 sep-line">
+                            <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an
+                                unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                            <p class="m-0">There are many variations of passages of Lorem Ipsum available, but the
+                                majority have suffered alteration in some form, by injected humour, or randomised words
+                                which don't look even slightly believable. If you are going to use a passage of Lorem
+                                Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of
+                                text.</p>
+                        </div>
+                        <!-- //.col-lg-6 -->
+                    </div>
+                    <!-- //.carousel-cell -->
+                </div>
+                <!-- //.carousel -->
+
+                <!-- Carousel page -->
+                <ul class="carousel-page font-alt fs-5 fw-bold list-inline text-center"></ul>
+            </div>
+            <!-- //.row -->
+        </div>
+        <!-- //.container -->
+    </section>
+    <!-- Section - Love Story End -->
+
+
+    <!-- Section - Proposed Start -->
+    <section id="proposed" class="bg-img-cover bg-overlay position-relative">
+        <div class="container position-relative">
+            <div class="row g-0">
+                <div class="col-md-9 col-lg-6 col-xl-5 bg-white p-5 position-relative rounded">
+                    <h3 class="font-alt fs-4 fw-bold text-uppercase">Cómo fue la propuesta de matrimonio</h3>
+                    <hr class="border-secondary sep-line">
+                    <p>He proposed on a Scrabble board. It's a game we've always loved.</p>
+                    <p>He glued the letters on, spelling "MILEA WILL YOU MARRY ME", and then asked if I wanted to play
+                        the game after dinner. He had me set up the game, and of course when I opened the board, I saw
+                        the letters spelling out the proposal!</p>
+                    <p>I was so awestruck, confused and surprised at the same time as he stood there ring in hand. I
+                        framed the board and have it hanging in our home.</p>
+                    <p class="font-alt fs-5 fst-italic mb-4">"Yes! Yes of course! Yes!"</p>
+
+                    <!-- Ornament -->
+                    <img width="100" src="img/ornament-divider.png" alt="" class="d-block mx-auto">
+                    <span class="ornament-corner ornament-primary"></span>
+                </div>
+                <!-- //.col-md-9 -->
+            </div>
+            <!-- //.row -->
+        </div>
+        <!-- //.container -->
+    </section>
+    <!-- Section - Proposed End -->
+
+
+    <!-- Section - Photos Start -->
+    <section id="photos">
+        <div class="container position-relative">
+            <div class="row mb-5 pb-lg-5">
+                <div class="col-12 text-center">
+                    <h2 class="font-alt fs-3 fw-bold text-uppercase">Galeria de fotos</h2>
+                    <p class="font-alt fs-5 fst-italic text-muted">Que vivas todo el tiempo que desees y ames todo el
+                        tiempo que quieras vivir.</p>
+                    <span class="section-divider divider-primary"></span>
+                </div>
+                <!-- //.col-12 -->
+            </div>
+            <!-- //.row -->
+
+            <div class="row">
+                <div class="col-12">
+                    <div class="gallery-wrapper">
+                        <div class="gallery-grid">
+                            <div class="item">
+                                <figure>
+                                    <div class="gallery-img">
+                                        <a href="images/gallery-1.jpg" data-gall="photos">
+                                            <img src="images/gallery-1.jpg" alt="">
+                                        </a>
+                                    </div>
+                                    <!-- //.gallery-img -->
+                                </figure>
+                            </div>
+                            <!-- //.item -->
+
+                            <div class="item">
+                                <figure>
+                                    <div class="gallery-img">
+                                        <a href="images/gallery-2.jpg" data-gall="photos">
+                                            <img src="images/gallery-2.jpg" alt="">
+                                        </a>
+                                    </div>
+                                    <!-- //.gallery-img -->
+                                </figure>
+                            </div>
+                            <!-- //.item -->
+
+                            <div class="item">
+                                <figure>
+                                    <div class="gallery-img">
+                                        <a href="images/gallery-3.jpg" data-gall="photos">
+                                            <img src="images/gallery-3.jpg" alt="">
+                                        </a>
+                                    </div>
+                                    <!-- //.gallery-img -->
+                                </figure>
+                            </div>
+                            <!-- //.item -->
+
+                            <div class="item">
+                                <figure>
+                                    <div class="gallery-img">
+                                        <a href="images/gallery-4.jpg" data-gall="photos">
+                                            <img src="images/gallery-4.jpg" alt="">
+                                        </a>
+                                    </div>
+                                    <!-- //.gallery-img -->
+                                </figure>
+                            </div>
+                            <!-- //.item -->
+
+                            <div class="item">
+                                <figure>
+                                    <div class="gallery-img">
+                                        <a href="images/gallery-5.jpg" data-gall="photos">
+                                            <img src="images/gallery-5.jpg" alt="">
+                                        </a>
+                                    </div>
+                                    <!-- //.gallery-img -->
+                                </figure>
+                            </div>
+                            <!-- //.item -->
+
+                            <div class="item">
+                                <figure>
+                                    <div class="gallery-img">
+                                        <a href="images/gallery-6.jpg" data-gall="photos">
+                                            <img src="images/gallery-6.jpg" alt="">
+                                        </a>
+                                    </div>
+                                    <!-- //.gallery-img -->
+                                </figure>
+                            </div>
+                            <!-- //.item -->
+
+                            <div class="item">
+                                <figure>
+                                    <div class="gallery-img">
+                                        <a href="images/gallery-7.jpg" data-gall="photos">
+                                            <img src="images/gallery-7.jpg" alt="">
+                                        </a>
+                                    </div>
+                                    <!-- //.gallery-img -->
+                                </figure>
+                            </div>
+                            <!-- //.item -->
+
+                            <div class="item">
+                                <figure>
+                                    <div class="gallery-img">
+                                        <a href="images/gallery-8.jpg" data-gall="photos">
+                                            <img src="images/gallery-8.jpg" alt="">
+                                        </a>
+                                    </div>
+                                    <!-- //.gallery-img -->
+                                </figure>
+                            </div>
+                            <!-- //.item -->
+                        </div>
+                        <!-- //.gallery-grid -->
+                    </div>
+                    <!-- //.gallery-wrapper -->
+                </div>
+                <!-- //.col-12 -->
+            </div>
+            <!-- //.row -->
+        </div>
+        <!-- //.container -->
+    </section>
+    <!-- Section - Photos End -->
+
+
+    <!-- Section - Wedding Gifts Start -->
+    <section id="wedding-gifts" class="bg-img-cover bg-overlay position-relative">
+        <div class="container position-relative">
+            <div class="row g-0">
+                <div class="col-md-9 col-lg-6 col-xl-5 bg-white p-5 position-relative rounded">
+                    <h3 class="font-alt fs-4 fw-bold text-uppercase">Regalos de Boda</h3>
+                    <hr class="border-secondary sep-line">
+                    <p id="descripcionRegalo"></p>
+                    <p class="font-alt fs-5 fst-italic mb-4">"El mayor regalo de la vida es la amistad, y yo tengo lo
+                        recibí."</p>
+                    <!-- Ornament -->
+                    <img width="100" src="img/ornament-divider.png" alt="" class="d-block mx-auto">
+                    <span class="ornament-corner ornament-primary"></span>
+                </div>
+                <!-- //.col-md-9 -->
+            </div>
+            <!-- //.row -->
+        </div>
+        <!-- //.container -->
+    </section>
+    <!-- Section - Wedding Gifts End -->
+
+
+    <!-- Section - RSVP Start -->
+    <section id="rsvp">
+        <div class="container">
+            <div class="row align-items-center gx-lg-5 justify-content-center">
+                <div class="col-md-8 col-lg-5 mb-5 mb-lg-0">
+                    <div class="img-clip-path clip-love-story position-relative">
+                        <img src="images/rsvp.jpg" alt="" class="img-fluid">
+                    </div>
+                    <!-- //.img-clip-path -->
+                </div>
+                <!-- //.col-md-8 -->
+
+                <div class="col-lg-7">
+                    <div class="mb-5 text-center">
+                        <h2 class="font-alt fs-3 fw-bold text-uppercase">Ven y Celebra con Nosotros</h2>
+                        <p class="font-alt fs-5 fst-italic text-muted">Si solo tienes una sonrisa, dásela al gente que
+                            amas.</p>
+                        <span class="section-divider divider-primary"></span>
+                    </div>
+                    <!-- //.mb-5 -->
+
+                    <form action="rsvp.php" method="post">
+                        <div class="row mb-3 mb-lg-4">
+                            <div class="col-md-6 mb-3 mb-lg-0">
+                                <label for="rsvp-name"
+                                    class="d-block font-alt fw-bold mb-2 text-uppercase">Nombres:</label>
+                                <input type="text" name="rsvp_name" id="rsvp-name" data-rules="required"
+                                    class="border border-2 font-alt p-2 rounded text-muted w-100"
+                                    placeholder="Tu nombre completo">
+                            </div>
+                            <!-- //.col-md-6 -->
+
+                            <div class="col-md-6">
+                                <label for="rsvp-email" class="d-block font-alt fw-bold mb-2 text-uppercase">Invitados
+                                    adicionales a ti:</label>
+                                <input type="number" min="0" max="100" name="rsvp_email" id="rsvp-email"
+                                    data-rules="email" class="border border-2 font-alt p-2 rounded text-muted w-100"
+                                    placeholder="Cantiadad de invitados">
+                            </div>
+
+                            <div class="col-md-6 mb-3 mb-lg-0">
+                                <label for="rsvp-name"
+                                    class="d-block font-alt fw-bold mb-2 text-uppercase">Asistencia a fiesta:</label>
+                                <select name="rsvp_events" id="rsvp-events" data-rules="required"
+                                    class="border border-2 font-alt p-2 rounded text-muted w-100">
+                                    <option value="">- Por favor selecciona uno por uno -</option>
+                                    <option value="Pendiente">Pendiente</option>
+                                    <option value="Asistir">Asistir</option>
+                                    <option value="Inasistencia">Inasistencia</option>
+                                </select>
+                            </div>
+
+                            <div class="col-md-6 mb-3 mb-lg-0">
+                                <label for="rsvp-name"
+                                    class="d-block font-alt fw-bold mb-2 text-uppercase">Asistencia a ceremonia</label>
+                                <select name="rsvp_events" id="rsvp-events" data-rules="required"
+                                    class="border border-2 font-alt p-2 rounded text-muted w-100">
+                                    <option value="">- Por favor selecciona uno por uno -</option>
+                                    <option value="Pendiente">Pendiente</option>
+                                    <option value="Asistir">Asistir</option>
+                                    <option value="Inasistencia">Inasistencia</option>
+                                </select>
+                            </div>
+                            <!-- //.col-md-6 -->
+                        </div>
+                        <!-- //.row -->
+
+                        <div class="row mb-3 mb-lg-4">
+                            <div class="col-md-6 mb-3 mb-lg-0">
+                                <label for="rsvp-events"
+                                    class="d-block font-alt fw-bold mb-2 text-uppercase">Eventos:</label>
+                                <select name="rsvp_events" id="rsvp-events" data-rules="required"
+                                    class="border border-2 font-alt p-2 rounded text-muted w-100">
+                                    <option value="">- Por favor selecciona uno por uno -</option>
+                                    <option value="Ceremony &amp; Reception">Ceremonia &amp; Fiesta</option>
+                                    <option value="Ceremony Only">Solo Ceremnonia</option>
+                                    <option value="Reception Only">Solo Fiesta</option>
+                                </select>
+                            </div>
+                            <!-- //.col-md-6 -->
+                        </div>
+                        <!-- //.row -->
+
+                        <div class="row mb-3 mb-lg-4">
+                            <div class="12">
+                                <label for="rsvp-message" class="d-block font-alt fw-bold mb-2 text-uppercase">Deja un
+                                    mensaje a la pareja:</label>
+                                <textarea name="rsvp_message" id="rsvp-message"
+                                    class="border border-2 font-alt p-2 rounded text-muted w-100" rows="6"
+                                    placeholder="¡Nos vemos allí!"></textarea>
+                            </div>
+                            <!-- //.col-12 -->
+                        </div>
+                        <!-- //.row -->
+
+                        <div class="text-center">
+                            <p class="font-alt text-muted">Por favor contestar antes del 26 de febrero del 2025.</p>
+                            <button type="submit"
+                                class="bg-secondary border-secondary btn font-alt fs-9 rounded text-center text-white shadow">Enviar
+                                respuesta ahora</button>
+                        </div>
+                        <!-- //.text-center -->
+                    </form>
+                </div>
+                <!-- //.col-lg-7 -->
+            </div>
+            <!-- //.row -->
+        </div>
+        <!-- //.container -->
+    </section>
+    <!-- Section - RSVP End -->
+
+
+    <!-- Footer Start -->
+    <footer class="bg-img-cover bg-overlay position-relative">
+        <div class="container position-relative">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <h2 class="font-alt fs-3 fw-bold text-uppercase text-light">¡No Podemos esperar para verte!</h2>
+                    <p class="font-alt fs-5 fst-italic text-light">Marzo, 5, 2025 | Iglesia Monte Cristo,
+                        Washington, DC</p>
+                    <img width="100" src="images/bg-footer.jpg" alt="" class="d-block mx-auto">
+                </div>
+                <!-- //.col-12 -->
+            </div>
+            <!-- //.row -->
+        </div>
+        <!-- //.container -->
+
+        <!-- Ornament -->
+        <span class="ornament-corner ornament-lg ornament-light"></span>
+    </footer>
+    <!-- Footer End -->
+
+
+    <!-- Required JS files -->
+    <script src="js/script.min.js"></script>
+    <script src="js/contador.js"></script>
+</body>
+
+</html>

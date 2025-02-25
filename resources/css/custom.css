@@ -1,0 +1,120 @@
+#hero {
+    background-image: url("../images/bg-hero.jpg")
+}
+
+#the-wedding-event {
+    background-image: url("../images/bg-the-wedding-event.jpg")
+}
+
+#proposed {
+    background-image: url("../images/bg-proposed.jpg")
+}
+
+#wedding-gifts {
+    background-image: url("../images/bg-wedding-gifts.jpg")
+}
+
+footer {
+    background-image: url("../images/bg-footer.jpg")
+}
+
+/* Estilo general */
+#countdown-container {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    background-color: #ae9073;
+    color: white;
+    text-align: center;
+    flex-wrap: nowrap; /* Evita columnas en PC */
+    flex-direction: row;
+    overflow-x: auto;
+}
+
+/* Estilo de cada cuadro */
+.counter-box {
+    background-color: black;
+    padding: 20px;
+    border-radius: 10px;
+    width: 100px;
+    font-size: 2rem;
+    font-weight: bold;
+    color: white;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Etiquetas pequeñas */
+.time-box small {
+    font-size: 1rem;
+    color: #ddd;
+    display: block;
+    margin-top: 5px;
+}
+
+/* Pantallas medianas */
+@media (max-width: 768px) {
+    #countdown-container {
+        gap: 15px;
+    }
+
+    .counter-box {
+        padding: 18px;
+        width: 85px;
+        font-size: 1.8rem;
+    }
+
+    .time-box small {
+        font-size: 0.85rem;
+    }
+}
+
+/* Pantallas pequeñas (móviles) */
+@media (max-width: 500px) {
+    #countdown-container {
+        flex-direction: row;
+        gap: 10px;
+        padding: 10px;
+        overflow-x: auto;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: nowrap;
+    }
+
+    .counter-box {
+        padding: 15px;
+        width: 80px;
+        font-size: 1.6rem;
+    }
+
+    .time-box small {
+        font-size: 0.85rem;
+    }
+}
+
+/* Pantallas pequeñas (móviles) */
+@media (max-width: 350px) {
+    #countdown-container {
+        flex-direction: row;
+        gap: 10px;
+        padding: 10px;
+        overflow-x: auto;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: nowrap;
+    }
+
+    .counter-box {
+        padding: 12px;
+        width: 60px;
+        font-size: 1.6rem;
+    }
+
+    .time-box small {
+        font-size: 0.85rem;
+    }
+}
+
+
+
+/*# sourceMappingURL=custom.min.css.map */
