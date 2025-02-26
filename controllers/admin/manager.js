@@ -17,8 +17,6 @@ const SAVE_FORM = document.getElementById('saveForm'),
 // Constantes para establecer los elementos del formulario de actualizar.
 const UPDATE_FORM = document.getElementById('updateForm'),
     ID_PROMETIDO = document.getElementById('idPrometido'),
-    USUARIO_UPDATE = document.getElementById('usuarioUpdate'),
-    PASS_UPDATE = document.getElementById('passUpdate'),
     PROMETIDO_UPDATE = document.getElementById('prometidoUpdate'),
     PROMETIDA_UPDATE = document.getElementById('prometidaUpdate'),
     PROMETIDO_TEL_UPDATE = document.getElementById('prometidoTelUpdate'),
@@ -300,8 +298,6 @@ const openUpdate = async (id) => {
         document.getElementById('country-code-1-u').value = codigoPrometido;
         document.getElementById('country-code2-u').value = codigoPrometida;
         ID_PROMETIDO.value = ROW.id_usuario;
-        USUARIO_UPDATE.value = ROW.usuario;
-        PASS_UPDATE.value = ROW.pass;
         PROMETIDO_UPDATE.value = ROW.prometido;
         PROMETIDA_UPDATE.value = ROW.prometida;
         PROMETIDO_TEL_UPDATE.value = num_prometido;

@@ -52,8 +52,6 @@ if (isset($_GET['action'])) {
             case 'updateRow':
                 $_POST = Validator::validateForm($_POST);
                 if (
-                    !$prometido->setUsuario($_POST['usuario']) or
-                    !$prometido->setClave($_POST['pass']) or
                     !$prometido->setPrometido($_POST['prometido']) or
                     !$prometido->setPrometida($_POST['prometida']) or
                     !$prometido->setNumeroPrometido($_POST['num_prometido']) or
