@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Personalizar</title>
+    <link rel="stylesheet" type="text/css" href="../../resources/css/style.css">
+    <link rel="stylesheet" href="../../resources/css/bootstrap.min.css">
+    <link rel="icon" href="../../resources/img/logo_reducido.ico" type="image/x-icon">
+    <!-- Required CSS files -->
+    <link href="../../resources/css/style.min.css" rel="stylesheet">
+    <link href="../../resources/css/custom_admin.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+
+<body>
+
+    <main class="table" id="customers_table">
+        <section class="table__header">
+            <!-- Header Start -->
+            <header class="fixed-top">
+                <nav class="navbar navbar-expand-lg p-0">
+                    <div class="container">
+                        <!-- Navbar brand (mobile) -->
+                        <div class="navbar-brand align-items-center d-flex d-lg-none me-0">
+                            <img width="166" height="60" src="../../resources/images/logo_reducido.png" alt="Logo">
+                        </div>
+
+                        <!-- Navbar toggler -->
+                        <button class="navbar-toggler bg-secondary" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false"
+                            aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+
+                        <!-- Navbar menu -->
+                        <div id="navbar" class="collapse navbar-collapse justify-content-lg-center">
+                            <ul class="navbar-nav pt-3 pt-lg-0">
+                                <li class="nav-item me-3">
+                                    <a class="nav-link page-scroll" href="manager.html">Invitaciones</a>
+                                </li>
+                            </ul>
+                            <!-- Navbar brand (desktop) -->
+                            <div class="navbar-brand d-none d-lg-block mx-3 mx-xl-5 text-center">
+                                <img width="218" height="117" src="../../resources/images/logo_largo.png" alt="Logo">
+                            </div>
+
+                            <ul class="navbar-nav pt-3 pt-lg-0 justify-content-lg-center">
+                                <li class="nav-item">
+                                    <a class="nav-link page-scroll" href="personalizacion.html">Personalizar</a>
+                                </li>
+                            </ul>
+                            <ul class="navbar-nav pt-3 pt-lg-0 justify-content-lg-center">
+                                <li class="nav-item">
+                                    <a class="status shipped px-2" href="login.html">Cerrar sesión</a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- //.collapse -->
+                    </div>
+                    <!-- //.container -->
+                </nav>
+            </header>
+        </section>
+
+        <section class="table__body">
+            <section class="table__header row">
+                <div class="col-8">
+                    <h1 class="col-md-6 col-sm-12">Personalizar</h1>
+                </div>
+            </section>
+            <div class="row px-2">
+                <form id="saveForm">
+                <div class="col-12 row">
+                    <div class="col-md-6 col-sm-12">
+                        <label for="rsvp-email" class="d-block font-alt fw-bold mb-2 text-uppercase" >Descripción de la
+                            ceremonia:</label>
+                        <textarea name="descripcion_ceremonia" id="descripcion_c"
+                            class="border border-2 font-alt p-2 rounded text-muted w-100" rows="6"
+                            placeholder="Escribe una descripción de la ceremonia"></textarea>
+
+                        <label for="rsvp-email" class="d-block font-alt fw-bold mb-2 text-uppercase">Lugar de la
+                            ceremonia:</label>
+                        <input type="text" name="lugar_ceremonia" id="lugar_c" data-rules="email"
+                            class="border border-2 font-alt p-2 rounded text-muted w-100"
+                            placeholder="Pega el link de google maps" required>
+
+                        <label for="rsvp-email" class="d-block font-alt fw-bold mb-2 text-uppercase">Hora de inicio de
+                            la ceremonia:</label>
+                        <input type="datetime-local" name="fecha_ceremonia" id="hora_c" 
+                            class="border border-2 font-alt p-2 rounded text-muted w-100" required>
+
+                        <label for="rsvp-email" class="d-block font-alt fw-bold mb-2 text-uppercase">Hora de fin de la
+                            ceremonia:</label>
+                        <input type="datetime-local" name="fecha_ceremonia_fin" id="hora_f_c" data-rules="email"
+                            class="border border-2 font-alt p-2 rounded text-muted w-100" required>
+                    </div>
+                    <div class="col-md-6 col-sm-12">
+                        <label for="rsvp-email" class="d-block font-alt fw-bold mb-2 text-uppercase">Descripción de la
+                            fiesta:</label>
+                        <textarea name="descripcion_fiesta" id="descripcion_f"
+                            class="border border-2 font-alt p-2 rounded text-muted w-100" rows="6"
+                            placeholder="Escribe una descripción de la fiesta"></textarea>
+
+                        <label for="rsvp-email" class="d-block font-alt fw-bold mb-2 text-uppercase">Lugar de la
+                            fiesta:</label>
+                        <input type="text" name="lugar_fiesta" id="lugar_f" data-rules="email"
+                            class="border border-2 font-alt p-2 rounded text-muted w-100"
+                            placeholder="Pega el link de google maps" required>
+
+                        <label for="rsvp-email" class="d-block font-alt fw-bold mb-2 text-uppercase">Hora de inicio de
+                            la fiesta:</label>
+                        <input type="datetime-local" name="fecha_fiesta" id="hora_f" 
+                            class="border border-2 font-alt p-2 rounded text-muted w-100" required>
+
+                        <label for="rsvp-email" class="d-block font-alt fw-bold mb-2 text-uppercase">Hora de fin de la
+                            fiesta:</label>
+                        <input type="datetime-local" name="fecha_fiesta_fin" id="hora_f_f" data-rules="email"
+                            class="border border-2 font-alt p-2 rounded text-muted w-100" required>
+                    </div>
+                </div>
+                <div class="col-12 row">
+                    <div class="col-12">
+                        <label for="rsvp-email" class="d-block font-alt fw-bold mb-2 text-uppercase">Descripción de los
+                            regalos:</label>
+                        <textarea name="descripcion_regalos" id="regalo"
+                            class="border border-2 font-alt p-2 rounded text-muted w-100" rows="6"
+                            placeholder="Escribe el tipo de regalos que les gustaría recibir"></textarea>
+                    </div>
+                    <div class="col-4 text-lg-end mt-2">
+                        <div class="col-md-2 col-sm-12">
+                            <button type="submit" class="status shipped px-2">Actualizar</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+            </div>
+        </section>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="../../resources/js/sweetalert.min.js"></script>
+    <!-- Llamada al controlador general de la aplicación -->
+    <script type="text/javascript" src="../../controllers/utils/components.js"></script>
+    <!-- Llamada al controlador del sitio público -->
+    <script type="text/javascript" src="../../controllers/utils/admin.js"></script>
+    <script src="../../controllers/admin/personalizacion.js"></script>
+    <script src="../../resources/js/scripts.js"></script>
+</body>
+
+</html>

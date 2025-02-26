@@ -1,19 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Invitados</title>
-    <link rel="stylesheet" type="text/css" href="../css/style.css">
-    <link rel="stylesheet" href="../css/bootstrap.min.css">
-    <link rel="icon" href="../img/logo_reducido.ico" type="../image/x-icon">
+    <link rel="stylesheet" type="text/css" href="../../resources/css/style_admin.css">
+    <link rel="stylesheet" href="../../resources/css/bootstrap.min.css">
+    <link rel="icon" href="../../resources/img/logo_reducido.ico" type="image/x-icon">
     <!-- Required CSS files -->
-    <link href="../css/style.min.css" rel="stylesheet">
-    <link href="../css/custom.css" rel="stylesheet">
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/css/intlTelInput.min.css">
+    <link href="../../resources/css/style.min.css" rel="stylesheet">
+    <link href="../../resources/css/custom_admin.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 
 </head>
 
@@ -27,7 +26,7 @@
                     <div class="container">
                         <!-- Navbar brand (mobile) -->
                         <div class="navbar-brand align-items-center d-flex d-lg-none me-0">
-                            <img width="166" height="60" src="../images/logo_reducido.png" alt="Logo">
+                            <img width="166" height="60" src="../../resources/images/logo_reducido.png" alt="Logo">
                         </div>
 
                         <!-- Navbar toggler -->
@@ -46,7 +45,7 @@
                             </ul>
                             <!-- Navbar brand (desktop) -->
                             <div class="navbar-brand d-none d-lg-block mx-3 mx-xl-5 text-center">
-                                <img width="218" height="117" src="../images/logo_largo.png" alt="Logo">
+                                <img width="218" height="117" src="../../resources/images/logo_largo.png" alt="Logo">
                             </div>
 
                             <ul class="navbar-nav pt-3 pt-lg-0 justify-content-lg-center">
@@ -56,9 +55,9 @@
                             </ul>
 
                             <ul class="navbar-nav pt-3 pt-lg-0 justify-content-lg-center">
-                                <li class="nav-item">
-                                    <a class="status shipped px-2" href="login.html">Cerrar sesión</a>
-                                </li>
+                                <button class="nav-item" onclick="logOut()">
+                                    <p class="status shipped px-2">Cerrar sesión</p>
+                                </button>
                             </ul>
                         </div>
 
@@ -78,7 +77,7 @@
                     </div>
                 </div>
                 <div class="col-md-2 col-sm-12">
-                    <button class="status shipped px-2" onclick="abrirmodal2()">Agregar invitados</button>
+                    <button class="status shipped px-2" onclick="openCreate()">Agregar invitados</button>
                 </div>
             </section>
             <table>
@@ -90,277 +89,118 @@
                         <th> Invitados<span class="icon-arrow">&UpArrow;</span></th>
                         <th> Acciones<span class="icon-arrow">&UpArrow;</span></th>
                         <th> Enviar invitación<span class="icon-arrow">&UpArrow;</span></th>
+                        <th>Eliminar<span class="icon-arrow">&UpArrow;</span></th>
                     </tr>
                 </thead>
-                <tbody>
-                    <tr>
-                        <td>María López</td>
-                        <td>Invitación sin enviar</td>
-                        <td>Invitación sin enviar</td>
-                        <td>4</td>
-                        <td><button type="button" class="status delivered px-4" onClick="abrirmodal()">Editar</button>
-                        <td><button type="button" class="btn p-0 border-0 px-4 bg-transparent" onClick="abrirmodal3()">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" fill="currentColor"
-                                    class="bi bi-send-plus" viewBox="0 0 16 16">
-                                    <path
-                                        d="M15.964.686a.5.5 0 0 0-.65-.65L.767 5.855a.75.75 0 0 0-.124 1.329l4.995 3.178 1.531 2.406a.5.5 0 0 0 .844-.536L6.637 10.07l7.494-7.494-1.895 4.738a.5.5 0 1 0 .928.372zm-2.54 1.183L5.93 9.363 1.591 6.602z" />
-                                    <path
-                                        d="M16 12.5a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0m-3.5-2a.5.5 0 0 0-.5.5v1h-1a.5.5 0 0 0 0 1h1v1a.5.5 0 0 0 1 0v-1h1a.5.5 0 0 0 0-1h-1v-1a.5.5 0 0 0-.5-.5" />
-                                </svg></button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Carlos Ramírez</td>
-                        <td>Denegado</td>
-                        <td>Confirmado</td>
-                        <td>2</td>
-                        <td><button type="button" class="status delivered px-4" onClick="abrirmodal()">Editar</button>
-                        <td><button type="button" class="btn p-0 px-4 border-0 bg-transparent"
-                                onClick="abrirmodal3()"><svg xmlns="http://www.w3.org/2000/svg" width="21" height="21"
-                                    fill="currentColor" class="bi bi-send-plus" viewBox="0 0 16 16">
-                                    <path
-                                        d="M15.964.686a.5.5 0 0 0-.65-.65L.767 5.855a.75.75 0 0 0-.124 1.329l4.995 3.178 1.531 2.406a.5.5 0 0 0 .844-.536L6.637 10.07l7.494-7.494-1.895 4.738a.5.5 0 1 0 .928.372zm-2.54 1.183L5.93 9.363 1.591 6.602z" />
-                                    <path
-                                        d="M16 12.5a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0m-3.5-2a.5.5 0 0 0-.5.5v1h-1a.5.5 0 0 0 0 1h1v1a.5.5 0 0 0 1 0v-1h1a.5.5 0 0 0 0-1h-1v-1a.5.5 0 0 0-.5-.5" />
-                                </svg></i></button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Lucía Fernández</td>
-                        <td>Pendiente</td>
-                        <td>Denegado</td>
-                        <td>5</td>
-                        <td><button type="button" class="status delivered px-4" onClick="abrirmodal()">Editar</button>
-                        <td><button type="button" class="btn p-0 px-4 border-0 bg-transparent"
-                                onClick="abrirmodal3()"><svg xmlns="http://www.w3.org/2000/svg" width="21" height="21"
-                                    fill="currentColor" class="bi bi-send-plus" viewBox="0 0 16 16">
-                                    <path
-                                        d="M15.964.686a.5.5 0 0 0-.65-.65L.767 5.855a.75.75 0 0 0-.124 1.329l4.995 3.178 1.531 2.406a.5.5 0 0 0 .844-.536L6.637 10.07l7.494-7.494-1.895 4.738a.5.5 0 1 0 .928.372zm-2.54 1.183L5.93 9.363 1.591 6.602z" />
-                                    <path
-                                        d="M16 12.5a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0m-3.5-2a.5.5 0 0 0-.5.5v1h-1a.5.5 0 0 0 0 1h1v1a.5.5 0 0 0 1 0v-1h1a.5.5 0 0 0 0-1h-1v-1a.5.5 0 0 0-.5-.5" />
-                                </svg></i></button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Javier Morales</td>
-                        <td>Confirmado</td>
-                        <td>Confirmado</td>
-                        <td>1</td>
-                        <td><button type="button" class="status delivered px-4" onClick="abrirmodal()">Editar</button>
-                        <td><button type="button" class="btn p-0 px-4 border-0 bg-transparent"
-                                onClick="abrirmodal3()"><svg xmlns="http://www.w3.org/2000/svg" width="21" height="21"
-                                    fill="currentColor" class="bi bi-send-plus" viewBox="0 0 16 16">
-                                    <path
-                                        d="M15.964.686a.5.5 0 0 0-.65-.65L.767 5.855a.75.75 0 0 0-.124 1.329l4.995 3.178 1.531 2.406a.5.5 0 0 0 .844-.536L6.637 10.07l7.494-7.494-1.895 4.738a.5.5 0 1 0 .928.372zm-2.54 1.183L5.93 9.363 1.591 6.602z" />
-                                    <path
-                                        d="M16 12.5a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0m-3.5-2a.5.5 0 0 0-.5.5v1h-1a.5.5 0 0 0 0 1h1v1a.5.5 0 0 0 1 0v-1h1a.5.5 0 0 0 0-1h-1v-1a.5.5 0 0 0-.5-.5" />
-                                </svg></i></button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Paula Gutiérrez</td>
-                        <td>Pendiente</td>
-                        <td>Denegado</td>
-                        <td>3</td>
-                        <td><button type="button" class="status delivered px-4" onClick="abrirmodal()">Editar</button>
-                        <td><button type="button" class="btn p-0 px-4 border-0 bg-transparent"
-                                onClick="abrirmodal3()"><svg xmlns="http://www.w3.org/2000/svg" width="21" height="21"
-                                    fill="currentColor" class="bi bi-send-plus" viewBox="0 0 16 16">
-                                    <path
-                                        d="M15.964.686a.5.5 0 0 0-.65-.65L.767 5.855a.75.75 0 0 0-.124 1.329l4.995 3.178 1.531 2.406a.5.5 0 0 0 .844-.536L6.637 10.07l7.494-7.494-1.895 4.738a.5.5 0 1 0 .928.372zm-2.54 1.183L5.93 9.363 1.591 6.602z" />
-                                    <path
-                                        d="M16 12.5a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0m-3.5-2a.5.5 0 0 0-.5.5v1h-1a.5.5 0 0 0 0 1h1v1a.5.5 0 0 0 1 0v-1h1a.5.5 0 0 0 0-1h-1v-1a.5.5 0 0 0-.5-.5" />
-                                </svg></i></button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Fernando Díaz</td>
-                        <td>Denegado</td>
-                        <td>Pendiente</td>
-                        <td>2</td>
-                        <td><button type="button" class="status delivered px-4" onClick="abrirmodal()">Editar</button>
-                        <td><button type="button" class="btn p-0 px-4 border-0 bg-transparent"
-                                onClick="abrirmodal3()"><svg xmlns="http://www.w3.org/2000/svg" width="21" height="21"
-                                    fill="currentColor" class="bi bi-send-plus" viewBox="0 0 16 16">
-                                    <path
-                                        d="M15.964.686a.5.5 0 0 0-.65-.65L.767 5.855a.75.75 0 0 0-.124 1.329l4.995 3.178 1.531 2.406a.5.5 0 0 0 .844-.536L6.637 10.07l7.494-7.494-1.895 4.738a.5.5 0 1 0 .928.372zm-2.54 1.183L5.93 9.363 1.591 6.602z" />
-                                    <path
-                                        d="M16 12.5a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0m-3.5-2a.5.5 0 0 0-.5.5v1h-1a.5.5 0 0 0 0 1h1v1a.5.5 0 0 0 1 0v-1h1a.5.5 0 0 0 0-1h-1v-1a.5.5 0 0 0-.5-.5" />
-                                </svg></i></button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Andrea Pérez</td>
-                        <td>Confirmado</td>
-                        <td>Pendiente</td>
-                        <td>4</td>
-                        <td><button type="button" class="status delivered px-4" onClick="abrirmodal()">Editar</button>
-                        <td><button type="button" class="btn p-0 px-4 border-0 bg-transparent"
-                                onClick="abrirmodal3()"><svg xmlns="http://www.w3.org/2000/svg" width="21" height="21"
-                                    fill="currentColor" class="bi bi-send-plus" viewBox="0 0 16 16">
-                                    <path
-                                        d="M15.964.686a.5.5 0 0 0-.65-.65L.767 5.855a.75.75 0 0 0-.124 1.329l4.995 3.178 1.531 2.406a.5.5 0 0 0 .844-.536L6.637 10.07l7.494-7.494-1.895 4.738a.5.5 0 1 0 .928.372zm-2.54 1.183L5.93 9.363 1.591 6.602z" />
-                                    <path
-                                        d="M16 12.5a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0m-3.5-2a.5.5 0 0 0-.5.5v1h-1a.5.5 0 0 0 0 1h1v1a.5.5 0 0 0 1 0v-1h1a.5.5 0 0 0 0-1h-1v-1a.5.5 0 0 0-.5-.5" />
-                                </svg></i></button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Hugo Castillo</td>
-                        <td>Pendiente</td>
-                        <td>Confirmado</td>
-                        <td>1</td>
-                        <td><button type="button" class="status delivered px-4" onClick="abrirmodal()">Editar</button>
-                        <td><button type="button" class="btn p-0 px-4 border-0 bg-transparent"
-                                onClick="abrirmodal3()"><svg xmlns="http://www.w3.org/2000/svg" width="21" height="21"
-                                    fill="currentColor" class="bi bi-send-plus" viewBox="0 0 16 16">
-                                    <path
-                                        d="M15.964.686a.5.5 0 0 0-.65-.65L.767 5.855a.75.75 0 0 0-.124 1.329l4.995 3.178 1.531 2.406a.5.5 0 0 0 .844-.536L6.637 10.07l7.494-7.494-1.895 4.738a.5.5 0 1 0 .928.372zm-2.54 1.183L5.93 9.363 1.591 6.602z" />
-                                    <path
-                                        d="M16 12.5a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0m-3.5-2a.5.5 0 0 0-.5.5v1h-1a.5.5 0 0 0 0 1h1v1a.5.5 0 0 0 1 0v-1h1a.5.5 0 0 0 0-1h-1v-1a.5.5 0 0 0-.5-.5" />
-                                </svg></i></button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Laura Torres</td>
-                        <td>Denegado</td>
-                        <td>Denegado</td>
-                        <td>5</td>
-                        <td><button type="button" class="status delivered px-4" onClick="abrirmodal()">Editar</button>
-                        <td><button type="button" class="btn p-0 px-4 border-0 bg-transparent"
-                                onClick="abrirmodal3()"><svg xmlns="http://www.w3.org/2000/svg" width="21" height="21"
-                                    fill="currentColor" class="bi bi-send-plus" viewBox="0 0 16 16">
-                                    <path
-                                        d="M15.964.686a.5.5 0 0 0-.65-.65L.767 5.855a.75.75 0 0 0-.124 1.329l4.995 3.178 1.531 2.406a.5.5 0 0 0 .844-.536L6.637 10.07l7.494-7.494-1.895 4.738a.5.5 0 1 0 .928.372zm-2.54 1.183L5.93 9.363 1.591 6.602z" />
-                                    <path
-                                        d="M16 12.5a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0m-3.5-2a.5.5 0 0 0-.5.5v1h-1a.5.5 0 0 0 0 1h1v1a.5.5 0 0 0 1 0v-1h1a.5.5 0 0 0 0-1h-1v-1a.5.5 0 0 0-.5-.5" />
-                                </svg></i></button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Pedro Vargas</td>
-                        <td>Confirmado</td>
-                        <td>Pendiente</td>
-                        <td>3</td>
-                        <td><button type="button" class="status delivered px-4" onClick="abrirmodal()">Editar</button>
-                        <td><button type="button" class="btn p-0 px-4 border-0 bg-transparent"
-                                onClick="abrirmodal3()"><svg xmlns="http://www.w3.org/2000/svg" width="21" height="21"
-                                    fill="currentColor" class="bi bi-send-plus" viewBox="0 0 16 16">
-                                    <path
-                                        d="M15.964.686a.5.5 0 0 0-.65-.65L.767 5.855a.75.75 0 0 0-.124 1.329l4.995 3.178 1.531 2.406a.5.5 0 0 0 .844-.536L6.637 10.07l7.494-7.494-1.895 4.738a.5.5 0 1 0 .928.372zm-2.54 1.183L5.93 9.363 1.591 6.602z" />
-                                    <path
-                                        d="M16 12.5a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0m-3.5-2a.5.5 0 0 0-.5.5v1h-1a.5.5 0 0 0 0 1h1v1a.5.5 0 0 0 1 0v-1h1a.5.5 0 0 0 0-1h-1v-1a.5.5 0 0 0-.5-.5" />
-                                </svg></i></button>
-                        </td>
-                    </tr>
-
+                <tbody id="table_body">
                 </tbody>
             </table>
         </section>
     </main>
 
-    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    <div class="modal fade" id="updateModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
         aria-hidden="true">
         <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header status delivered">
-                    <h5 class="modal-title" id="exampleModalLabel">Editar información</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close" onclick="cerrarmodal()">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <form>
+            <form id="updateForm">
+                <div class="modal-content">
+                    <div class="modal-header status delivered">
+                        <h5 class="modal-title" id="exampleModalLabel">Editar información</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <input type="number" class="d-none" id="idInvitado" name="id_invitado">
                         <div class="form-group">
                             <label for="phone" class="col-form-label">Número de teléfono:</label>
                             <div class="d-flex">
-                                <select id="country-code" class="form-control me-2" style="max-width: 160px;">
+                                <select id="country-code-1-u" class="form-control me-2" style="max-width: 160px;">
                                 </select>
-                                <input type="tel" id="phone-number" class="form-control"
+                                <input type="number" id="prometidoTelUpdate" class="form-control"
                                     placeholder="Número de teléfono">
                             </div>
-                            <small id="phone-error" class="text-danger d-none">Número inválido para el prefijo
+                            <small id="phone-error1-u" class="text-danger d-none">Número inválido para el prefijo
                                 seleccionado.</small>
                         </div>
 
                         <div class="form-group">
                             <label for="recipient-name" class="col-form-label">Nombres:</label>
-                            <input type="text" class="form-control" id="recipient-name">
+                            <input type="text" class="form-control" id="nombre" name="nombre">
                         </div>
 
                         <div class="form-group">
                             <label for="recipient-name" class="col-form-label">Invitados limites:</label>
-                            <input type="text" class="form-control" id="recipient-name">
+                            <input type="number" class="form-control" id="invitados-limite" name="invitadosLimite">
                         </div>
                         <div class="form-group">
                             <label for="message-text" class="col-form-label">Mensaje del invitado para la
                                 pareja:</label>
-                            <textarea class="form-control" id="message-text">  Les deseo lo mejor!!! </textarea>
+                            <textarea class="form-control" id="mensaje">  Les deseo lo mejor!!! </textarea>
                         </div>
-                    </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" class="status delivered px-4">Guardar cambios</button>
+                    </div>
                 </div>
-                <div class="modal-footer">
-                    <button type="button" class="status delivered px-4">Guardar cambios</button>
-                </div>
-            </div>
+            </form>
         </div>
     </div>
 
-    <div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    <div class="modal fade" id="saveModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
         aria-hidden="true">
         <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header status delivered">
-                    <h5 class="modal-title" id="exampleModalLabel">Agregar invitado</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"
-                        onclick="cerrarmodal2()">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <form>
+            <form id="saveForm">
+                <div class="modal-content">
+                    <div class="modal-header status delivered">
+                        <h5 class="modal-title" id="exampleModalLabel">Agregar invitado</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
                         <div class="form-group">
-                            <label for="phone2" class="col-form-label">Número de teléfono:</label>
+                            <label for="phone" class="col-form-label">Número de teléfono:</label>
                             <div class="d-flex">
-                                <select id="country-code2" class="form-control me-2" style="max-width: 160px;">
+                                <select id="country-code2-u" class="form-control me-2" style="max-width: 160px;">
                                 </select>
-                                <input type="tel" id="phone-number2" class="form-control"
+                                <input type="number" id="invitadoTel" class="form-control"
                                     placeholder="Número de teléfono">
                             </div>
-                            <small id="phone-error2" class="text-danger d-none">Número inválido para el prefijo
+                            <small id="phone-error2-u" class="text-danger d-none">Número inválido para el prefijo
                                 seleccionado.</small>
                         </div>
                         <div class="form-group">
                             <label for="recipient-name" class="col-form-label">Nombres:</label>
-                            <input type="text" class="form-control" id="recipient-name">
+                            <input type="text" class="form-control" id="recipient-name" name="nombre">
                         </div>
 
                         <div class="form-group">
                             <label for="recipient-name" class="col-form-label">Invitados limites:</label>
-                            <input type="text" class="form-control" id="recipient-name">
+                            <input type="number" class="form-control" id="recipient-name" name="invitadosLimite">
                         </div>
-                    </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" class="status delivered px-4">Agregar invitado</button>
+                    </div>
                 </div>
-                <div class="modal-footer">
-                    <button type="button" class="status delivered px-4">Agregar invitado</button>
-                </div>
-            </div>
+            </form>
         </div>
     </div>
 
-    <div class="modal fade" id="exampleModal3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    <div class="modal fade" id="enviarModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
         aria-hidden="true">
         <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header status delivered">
-                    <h5 class="modal-title" id="exampleModalLabel">Invitación</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"
-                        onclick="cerrarmodal3()">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <form>
+            <form id="enviarForm">
+                <div class="modal-content">
+                    <input type="number" class="d-none" id="idInvitadoEnviar" name="id_invitado">
+                    <div class="modal-header status delivered">
+                        <h5 class="modal-title" id="exampleModalLabel">Invitación</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"
+                            onclick="cerrarmodal3()">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
                         <div class="form-group">
                             <label for="message-text" class="col-form-label">Mensaje para el invitado:</label>
                             <textarea class="form-control" id="Invitación" aria-multiline="true" rows="10">  💍 ¡Nos Casamos! 💍
@@ -380,25 +220,33 @@
                         </div>
                         <div class=" form-group input-group flex-nowrap py-3">
                             <div class="input-group-prepend">
-                              <span class="input-group-text" id="addon-wrapping"><svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" fill="currentColor" class="bi bi-copy" viewBox="0 0 16 16">
-                                <path fill-rule="evenodd" d="M4 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zM2 5a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1v-1h1v1a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h1v1z"/>
-                              </svg></span>
+                                <button class="input-group-text" id="addon-wrapping" onclick="copyLink()"><svg
+                                        xmlns="http://www.w3.org/2000/svg" width="23" height="23" fill="currentColor"
+                                        class="bi bi-copy" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd"
+                                            d="M4 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zM2 5a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1v-1h1v1a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h1v1z" />
+                                    </svg></button>
                             </div>
-                            <input type="text" class="form-control" aria-describedby="addon-wrapping" placeholder="https://www.wedding.com/invitacion/123456"> 
-                          </div>
-                    </form>
+                            <input type="text" class="form-control" aria-describedby="addon-wrapping" id="link">
+                        </div>
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="status delivered px-4">Enviar invitación</button>
+                    </div>
                 </div>
-                <div class="modal-footer">
-                    <button type="button" class="status delivered px-4">Enviar invitación</button>
-                </div>
-            </div>
+            </form>
         </div>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="../js/scripts.js"></script>
-    <script src="../js/script.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/js/intlTelInput.min.js"></script>
+    <script type="text/javascript" src="../../resources/js/sweetalert.min.js"></script>
+    <!-- Llamada al controlador general de la aplicación -->
+    <script type="text/javascript" src="../../controllers/utils/components.js"></script>
+    <!-- Llamada al controlador del sitio público -->
+    <script type="text/javascript" src="../../controllers/utils/prometidos.js"></script>
+    <script src="../../controllers/prometidos/manager.js"></script>
+    <script src="../../resources/js/scripts.js"></script>
 
 </body>
 

@@ -20,14 +20,19 @@ class AdministradorHandler
     {
         $sql = 'SELECT id_usuario, usuario, pass
                 FROM administrador_tb
-                WHERE usuario = ?';
+                WHERE usuario = ?;';
         $params = array($username);
         if (!($data = Database::getRow($sql, $params))) {
             return false;
         } elseif (password_verify($password, $data['pass'])) {
             $_SESSION['idAdministrador'] = $data['id_usuario'];
             $_SESSION['aliasAdministrador'] = $data['usuario'];
-            return true;
+            // Crea un condicional que si idAdministrador y aliasAdministrador son diferentes de null, entonces se retorna verdadero.
+            if ($data['id_usuario'] != null && $data['usuario'] != null) {
+                return true;
+            } else {
+                return false;
+            }
         } else {
             return false;
         }
@@ -37,8 +42,8 @@ class AdministradorHandler
     {
         $sql = 'SELECT pass
                 FROM administrador_tb
-                WHERE id_usuario = ?';
-        $params = array($_SESSION['id_usuario']);
+                WHERE id_usuario = ?;';
+        $params = array($_SESSION['idAdministrador']);
         if (!($data = Database::getRow($sql, $params))) {
             return false;
         } elseif (password_verify($password, $data['pass'])) {
@@ -53,7 +58,7 @@ class AdministradorHandler
         $sql = 'UPDATE administrador_tb
                 SET pass = ?
                 WHERE id_usuario = ?';
-        $params = array($this->clave, $_SESSION['id_usuario']);
+        $params = array($this->clave, $_SESSION['idAdministrador']);
         return Database::executeRow($sql, $params);
     }
 
@@ -61,8 +66,8 @@ class AdministradorHandler
     {
         $sql = 'SELECT id_usuario, pass, usuario
                 FROM administrador_tb
-                WHERE id_usuario = ?';
-        $params = array($_SESSION['id_usuario']);
+                WHERE id_usuario = ?;';
+        $params = array($_SESSION['idAdministrador']);
         return Database::getRow($sql, $params);
     }
 
@@ -70,7 +75,7 @@ class AdministradorHandler
     public function createRow()
     {
         $sql = 'INSERT INTO administrador_tb(usuario, pass)
-                VALUES(?, ?)';
+                VALUES(?, ?);';
         $params = array($this->usuario, $this->clave);
         return Database::executeRow($sql, $params);
     }

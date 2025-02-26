@@ -20,14 +20,14 @@ class InvitadoHandler
 
     public function createRow()
     {
-        $sql = 'CALL create_invitado(?, ?, ?, ?)';
+        $sql = 'CALL create_invitados(?, ?, ?, ?)';
         $params = array($this->nombre, $this->invitado_limit, $_SESSION['id_prometido'], $this->num_invitado);
         return Database::executeRow($sql, $params);
     }
 
     public function readAll()
     {
-        $sql = 'SELECT id_invitado, nombre_invitado, invitacion_ceremonia, invitacion_fiesta, invitados_cant
+        $sql = 'SELECT id_invitado, nombre_invitado, invitacion_ceremonia, invitacion_fiesta, invitados_limite
                 FROM invitados_tb;';
         return Database::getRows($sql);
     }
