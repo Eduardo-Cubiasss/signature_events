@@ -12,6 +12,7 @@ if (isset($_GET['action'])) {
     $result = array('status' => 0, 'message' => null, 'dataset' => null, 'error' => null, 'exception' => null, 'fileStatus' => null);
     // Se verifica si existe una sesión iniciada como administrador, de lo contrario se finaliza el script con un mensaje de error.
     if (isset($_SESSION['idAdministrador'])) {
+        $result['session'] = 1;
         // Se compara la acción a realizar cuando un administrador ha iniciado sesión.
         switch ($_GET['action']) {
             case 'createRowOrUpdate':
@@ -26,10 +27,10 @@ if (isset($_GET['action'])) {
                     !$personalizacion->setDescripcionRegalo($_POST['descripcion_regalos']) or
                     !$personalizacion->setLugarFiesta($_POST['lugar_fiesta']) or
                     !$personalizacion->setLugarCeremonia($_POST['lugar_ceremonia']) or
-                    !$personalizacion->setIdPrometido($_SESSION['id_prometido'])
+                    !$personalizacion->setIdPrometido($_POST['id_prometido'])
                 ) {
                     $result['error'] = $personalizacion->getDataError();
-                } elseif ($personalizacion->createRowOrUpdate()) {
+                } elseif ($personalizacion->createRowOrUpdateA()) {
                     $result['status'] = 1;
                     $result['message'] = 'Datos actualizados de la boda';
                 } else {
@@ -39,7 +40,7 @@ if (isset($_GET['action'])) {
             case 'readOne':
                 if (!$personalizacion->setIdPrometido($_POST['id_prometido'])) {
                     $result['error'] = $personalizacion->getDataError();
-                } elseif ($result['dataset'] = $personalizacion->readOne()) {
+                } elseif ($result['dataset'] = $personalizacion->readOneA()) {
                     $result['status'] = 1;
                 } else {
                     $result['error'] = 'Boda inexistente';

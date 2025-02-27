@@ -82,4 +82,24 @@ class PersonalizacionHandler
                 FROM prometidos_tb;';
         return Database::getRows($sql);
     }
+
+    // Métodos para admin
+    
+    public function createRowOrUpdateA()
+    {
+        $sql = 'CALL create_or_update_boda(?, ?, ?, ?, ?, ?, ?, ?, ?, ?)';
+        $params = array($this->descripcion_ceremonia, $this->fecha_ceremonia, $this->fecha_ceremonia_fin, 
+        $this->descripcion_fiesta, $this->fecha_fiesta, $this->fecha_fiesta_fin, $this->descripcion_regalos, $this->id_prometido, $this->lugar_fiesta, $this->lugar_ceremonia);
+        return Database::executeRow($sql, $params);
+    }
+
+
+    public function readOneA()
+    {
+        $sql = 'SELECT descripcion_ceremonia, fecha_ceremonia, fecha_ceremonia_fin, descripcion_fiesta, fecha_fiesta, fecha_fiesta_fin, descripcion_regalos, lugar_ceremonia, lugar_fiesta
+                FROM boda_tb
+                WHERE id_prometido = ?';
+        $params = array($this->id_prometido);
+        return Database::getRow($sql, $params);
+    }
 }

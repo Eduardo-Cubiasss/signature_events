@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Invitados</title>
+    <link rel="stylesheet" type="text/css" href="../../resources/css/style_admin.css">
+    <link rel="stylesheet" href="../../resources/css/bootstrap.min.css">
+    <link rel="icon" href="../../resources/img/logo_reducido.ico" type="image/x-icon">
+    <!-- Required CSS files -->
+    <link href="../../resources/css/style.min.css" rel="stylesheet">
+    <link href="../../resources/css/custom_admin.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+</head>
+
+<body>
+
+    <main class="table" id="customers_table">
+        <section class="table__header">
+            <!-- Header Start -->
+            <header class="fixed-top">
+                <nav class="navbar navbar-expand-lg p-0">
+                    <div class="container">
+                        <!-- Navbar brand (mobile) -->
+                        <div class="navbar-brand align-items-center d-flex d-lg-none me-0">
+                            <img width="166" height="60" src="../../resources/images/logo_reducido.png" alt="Logo">
+                        </div>
+
+                        <!-- Navbar toggler -->
+                        <button class="navbar-toggler bg-secondary" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false"
+                            aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+
+                        <!-- Navbar menu -->
+                        <div id="navbar" class="collapse navbar-collapse justify-content-lg-center">
+                            <ul class="navbar-nav pt-3 pt-lg-0">
+                                <li class="nav-item me-3">
+                                    <a class="nav-link page-scroll" id="a_Invitaciones" href="Invitados.html">Invitaciones</a>
+                                </li>
+                            </ul>
+                            <!-- Navbar brand (desktop) -->
+                            <div class="navbar-brand d-none d-lg-block mx-3 mx-xl-5 text-center">
+                                <img width="218" height="117" src="../../resources/images/logo_largo.png" alt="Logo">
+                            </div>
+
+                            <ul class="navbar-nav pt-3 pt-lg-0 justify-content-lg-center">
+                                <li class="nav-item">
+                                    <a class="nav-link page-scroll" id="a_personalizar" href="personalizacion.html">Personalizar</a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- //.collapse -->
+                    </div>
+                    <!-- //.container -->
+                </nav>
+            </header>
+        </section>
+
+        <section class="table__body">
+            <section class="table__header row">
+                <div class="col-8">
+                    <h1 class="col-md-6 col-sm-12">Invitados</h1>
+                    <div class="input-group col-6 py-2 w-100">
+                        <input type="search" placeholder="Buscar invit...">
+                    </div>
+                </div>
+                <div class="col-md-2 col-sm-12">
+                    <button class="status shipped px-2" onclick="openCreate()">Agregar invitados</button>
+                </div>
+            </section>
+            <table>
+                <thead class="">
+                    <tr>
+                        <th> Nombre del invitado <span class="icon-arrow">&UpArrow;</span></th>
+                        <th> Asistencia a fiesta <span class="icon-arrow">&UpArrow;</span></th>
+                        <th> Asistencia a ceremonia<span class="icon-arrow">&UpArrow;</span></th>
+                        <th> Invitados<span class="icon-arrow">&UpArrow;</span></th>
+                        <th> Acciones<span class="icon-arrow">&UpArrow;</span></th>
+                        <th> Enviar invitación<span class="icon-arrow">&UpArrow;</span></th>
+                        <th>Eliminar<span class="icon-arrow">&UpArrow;</span></th>
+                    </tr>
+                </thead>
+                <tbody id="table_body">
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <div class="modal fade" id="updateModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <form id="updateForm">
+                <div class="modal-content">
+                    <div class="modal-header status delivered">
+                        <h5 class="modal-title" id="exampleModalLabel">Editar información</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <input type="number" class="d-none" id="idInvitado" name="id_invitado">
+                        <div class="form-group">
+                            <label for="phone" class="col-form-label">Número de teléfono:</label>
+                            <div class="d-flex">
+                                <select id="country-code-1-u" class="form-control me-2" style="max-width: 160px;">
+                                </select>
+                                <input type="number" id="prometidoTelUpdate" class="form-control"
+                                    placeholder="Número de teléfono">
+                            </div>
+                            <small id="phone-error1-u" class="text-danger d-none">Número inválido para el prefijo
+                                seleccionado.</small>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="recipient-name" class="col-form-label">Nombres:</label>
+                            <input type="text" class="form-control" id="nombre" name="nombre">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="recipient-name" class="col-form-label">Invitados limites:</label>
+                            <input type="number" class="form-control" id="invitados-limite" name="invitadosLimite">
+                        </div>
+                        <div class="form-group">
+                            <label for="message-text" class="col-form-label">Mensaje del invitado para la
+                                pareja:</label>
+                            <textarea class="form-control" id="mensaje">  Les deseo lo mejor!!! </textarea>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" class="status delivered px-4">Guardar cambios</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="modal fade" id="saveModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <form id="saveForm">
+                <div class="modal-content">
+                    <div class="modal-header status delivered">
+                        <h5 class="modal-title" id="exampleModalLabel">Agregar invitado</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <label for="phone" class="col-form-label">Número de teléfono:</label>
+                            <div class="d-flex">
+                                <select id="country-code2-u" class="form-control me-2" style="max-width: 160px;">
+                                </select>
+                                <input type="number" id="invitadoTel" class="form-control"
+                                    placeholder="Número de teléfono">
+                            </div>
+                            <small id="phone-error2-u" class="text-danger d-none">Número inválido para el prefijo
+                                seleccionado.</small>
+                        </div>
+                        <div class="form-group">
+                            <label for="recipient-name" class="col-form-label">Nombres:</label>
+                            <input type="text" class="form-control" id="recipient-name" name="nombre">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="recipient-name" class="col-form-label">Invitados limites:</label>
+                            <input type="number" class="form-control" id="recipient-name" name="invitadosLimite">
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" class="status delivered px-4">Agregar invitado</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="modal fade" id="enviarModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <form id="enviarForm">
+                <div class="modal-content">
+                    <input type="number" class="d-none" id="idInvitadoEnviar" name="id_invitado">
+                    <div class="modal-header status delivered">
+                        <h5 class="modal-title" id="exampleModalLabel">Invitación</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"
+                            onclick="cerrarmodal3()">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <label for="message-text" class="col-form-label">Mensaje para el invitado:</label>
+                            <textarea class="form-control" id="Invitación" aria-multiline="true" rows="10">  💍 ¡Nos Casamos! 💍
+                                Con gran alegría y amor en nuestros corazones,
+                                te invitamos a compartir con nosotros
+                                el día en que uniremos nuestras vidas para siempre.
+                                
+                                ✨ [Nombre de la Novia] & [Nombre del Novio] ✨
+                                
+                                📅 Fecha: [Día, Mes y Año]
+                                🕒 Hora: [Hora de la Ceremonia]
+                                🏛️ Lugar: [Nombre del Lugar]
+                                📍 Dirección: [Dirección Completa]
+                                
+                                Después de la ceremonia, celebraremos juntos con música, cena y mucha diversión.
+                                ¡Tu presencia hará de este día algo inolvidable! </textarea>
+                        </div>
+                        <div class=" form-group input-group flex-nowrap py-3">
+                            <div class="input-group-prepend">
+                                <button class="input-group-text" id="addon-wrapping" onclick="copyLink()"><svg
+                                        xmlns="http://www.w3.org/2000/svg" width="23" height="23" fill="currentColor"
+                                        class="bi bi-copy" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd"
+                                            d="M4 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zM2 5a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1v-1h1v1a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h1v1z" />
+                                    </svg></button>
+                            </div>
+                            <input type="text" class="form-control" aria-describedby="addon-wrapping" id="link">
+                        </div>
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="status delivered px-4">Enviar invitación</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="../../resources/js/sweetalert.min.js"></script>
+    <!-- Llamada al controlador general de la aplicación -->
+    <script type="text/javascript" src="../../controllers/utils/components.js"></script>
+    <!-- Llamada al controlador del sitio público -->
+    <script type="text/javascript" src="../../controllers/utils/admin.js"></script>
+    <script src="../../controllers/admin/invitados.js"></script>
+    <script src="../../resources/js/scripts.js"></script>
+
+</body>
+
+</html>

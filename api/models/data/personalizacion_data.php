@@ -52,7 +52,7 @@ class PersonalizacionData extends PersonalizacionHandler
             return false;
         }
     }
-    public function setDescripcionCeremonia($value, $min = 2, $max = 400)
+    public function setDescripcionCeremonia($value, $min = 2, $max = 600)
     {
         if (!Validator::validateString($value)) {
             $this->data_error = 'La descripcion contiene caracteres prohibidos';
@@ -67,7 +67,7 @@ class PersonalizacionData extends PersonalizacionHandler
     }
 
 
-    public function setDescripcionFiesta($value, $min = 2, $max = 400)
+    public function setDescripcionFiesta($value, $min = 2, $max = 600)
     {
         if (!Validator::validateString($value)) {
             $this->data_error = 'La descripcion contiene caracteres prohibidos';
@@ -107,10 +107,7 @@ class PersonalizacionData extends PersonalizacionHandler
     }
     public function setDescripcionRegalo($value, $min = 2, $max = 500)
     {
-        if (!Validator::validateString($value)) {
-            $this->data_error = 'La descripcion contiene caracteres prohibidos';
-            return false;
-        } elseif (Validator::validateLength($value, $min, $max)) {
+        if (Validator::validateLength($value, $min, $max)) {
             $this->descripcion_regalos = $value;
             return true;
         } else {
@@ -121,10 +118,7 @@ class PersonalizacionData extends PersonalizacionHandler
 
     public function setLugarFiesta($value, $min = 2, $max = 500)
     {
-        if (!Validator::validateLink($value)) {
-            $this->data_error = 'El lugar contiene caracteres prohibidos';
-            return false;
-        } elseif (Validator::validateLength($value, $min, $max)) {
+        if (Validator::validateLength($value, $min, $max)) {
             $this->lugar_fiesta = $value;
             return true;
         } else {
@@ -135,14 +129,11 @@ class PersonalizacionData extends PersonalizacionHandler
 
     public function setLugarCeremonia($value, $min = 2, $max = 500)
     {
-        if (!Validator::validateLink($value)) {
-            $this->data_error = 'El lugar contiene caracteres prohibidos';
-            return false;
-        } elseif (Validator::validateLength($value, $min, $max)) {
+        if (Validator::validateLength($value, $min, $max)) {
             $this->lugar_ceremonia = $value;
             return true;
         } else {
-            $this->data_error = 'La descripción debe tener una longitud entre ' . $min . ' y ' . $max;
+            $this->data_error = 'El lugar debe tener una longitud entre ' . $min . ' y ' . $max;
             return false;
         }
     }

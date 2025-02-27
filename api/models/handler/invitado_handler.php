@@ -27,9 +27,19 @@ class InvitadoHandler
 
     public function readAll()
     {
-        $sql = 'SELECT id_invitado, nombre_invitado, invitacion_ceremonia, invitacion_fiesta, invitados_limite
-                FROM invitados_tb;';
-        return Database::getRows($sql);
+        $sql = 'SELECT 
+    b.id_prometido, 
+    i.id_invitado, 
+    i.nombre_invitado, 
+    i.invitacion_ceremonia, 
+    i.invitacion_fiesta, 
+    i.invitados_limite
+    FROM invitados_tb i
+    JOIN boda_tb b ON i.id_boda = b.id_boda
+WHERE b.id_prometido = ?;
+';
+        $params = array($_SESSION['id_prometido']);
+        return Database::getRows($sql, $params);
     }
 
     public function readOne()
@@ -71,6 +81,31 @@ class InvitadoHandler
         $sql = 'UPDATE invitados_tb SET invitacion_ceremonia = "Pendiente", invitacion_fiesta = "Pendiente" WHERE id_invitado = ?';
         $params = array($this->id);
         return Database::executeRow($sql, $params);
+    }
+
+    // Metodos para admin
+    public function createRowA()
+    {
+        $sql = 'CALL create_invitados(?, ?, ?, ?)';
+        $params = array($this->nombre, $this->invitado_limit, $this->id, $this->num_invitado);
+        return Database::executeRow($sql, $params);
+    }
+
+    public function readAllA()
+    {
+        $sql = 'SELECT 
+    b.id_prometido, 
+    i.id_invitado, 
+    i.nombre_invitado, 
+    i.invitacion_ceremonia, 
+    i.invitacion_fiesta, 
+    i.invitados_limite
+    FROM invitados_tb i
+    JOIN boda_tb b ON i.id_boda = b.id_boda
+WHERE b.id_prometido = ?;
+';
+        $params = array($this->id);
+        return Database::getRows($sql, $params);
     }
 
 }

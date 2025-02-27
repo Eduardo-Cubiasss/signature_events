@@ -1,5 +1,5 @@
 // Constante para completar la ruta de la API.
-const INVITADO_API = 'services/prometido/invitado.php';
+const INVITADO_API = 'services/admin/invitado.php';
 // Constantes para establecer los elementos de la tabla.
 const TABLE_BODY = document.getElementById('table_body');
 // Constantes para establecer los elementos del componente Modal.
@@ -22,6 +22,21 @@ const UPDATE_FORM = document.getElementById('updateForm'),
 const ENVIAR_FORM = document.getElementById('enviarForm'),
     LINK_INVITACION = document.getElementById('link'),
     ID_INVITADO_ENVIAR = document.getElementById('idInvitadoEnviar');
+
+// Constante para establecer los parametros URL    
+const urlParams = new URLSearchParams(window.location.search);
+const id = urlParams.get('p');
+
+// Elementos <a> que deben heredar el parámetro
+const INVITADOS_A = document.getElementById('a_Invitaciones');
+const PERSONALIZAR_A = document.getElementById('a_personalizar');
+
+// Verificar si el parámetro 'p' existe antes de actualizar los enlaces
+if (id) {
+    INVITADOS_A.href = `Invitados.html?p=${id}`;
+    PERSONALIZAR_A.href = `personalizacion.html?p=${id}`;
+}
+
 // Método del evento para cuando el documento ha cargado.
 document.addEventListener('DOMContentLoaded', () => {
     // Llamada a la función para llenar la tabla con los registros existentes.
@@ -146,6 +161,7 @@ SAVE_FORM.addEventListener('submit', async (event) => {
     event.preventDefault();
     // Se verifica la acción a realizar.
     action = 'createRow';
+
     // Constante tipo objeto con los datos del formulario.
     const FORM = new FormData(SAVE_FORM);
     // extrae el codigo de pais y el numero de telefono
@@ -153,6 +169,7 @@ SAVE_FORM.addEventListener('submit', async (event) => {
     let codigoPrometida = document.getElementById('country-code2-u').value;
     // concatena el codigo de pais y el numero de telefono
     FORM.append('numeroInvitado', codigoPrometida + ',' + prometidaTel);
+    FORM.append('id_prometido', id);
     // Petición para guardar los datos del formulario.
     const DATA = await fetchData(INVITADO_API, action, FORM);
     console.log(DATA);
@@ -210,7 +227,9 @@ const fillTable = async (form = null) => {
     TABLE_BODY.innerHTML = '';
     // Se verifica la acción a realizar.
     // Petición para obtener los registros disponibles.
-    const DATA = await fetchData(INVITADO_API, 'readAll', form);
+    const FORM = new FormData();
+    FORM.append('id_prometido', id);
+    const DATA = await fetchData(INVITADO_API, 'readAll', FORM);
     console.log(DATA);
     // Se comprueba si la respuesta es satisfactoria, de lo contrario se muestra un mensaje con el error.
     if (DATA.status) {

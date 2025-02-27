@@ -15,8 +15,10 @@ define('PASSWORD', '');
 */
 
 // Credenciales para la base de datos en el servidor de producción.
+
 define('SERVER', 'localhost');
 define('DATABASE', 'signature_Events');
 define('USERNAME', 'signature');
 define('PASSWORD', 'qP5DgMSi');
+
 ?>

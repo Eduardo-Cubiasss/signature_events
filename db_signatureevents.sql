@@ -52,20 +52,32 @@ CREATE TABLE invitados_tb (
 
 DELIMITER //
 
+DROP PROCEDURE IF EXISTS create_prometidos; -- Eliminar el procedimiento si existe
+
 CREATE PROCEDURE create_prometidos(
-	IN usuario_ VARCHAR(100),
-   IN pass_ VARCHAR(200),
-   IN prometido_ VARCHAR(100),
-   IN prometida_ VARCHAR(100),
-   IN num_prometido_ VARCHAR(100),
-   IN num_prometida_ VARCHAR(100)		
+    IN usuario_ VARCHAR(100),
+    IN pass_ VARCHAR(200),
+    IN prometido_ VARCHAR(100),
+    IN prometida_ VARCHAR(100),
+    IN num_prometido_ VARCHAR(100),
+    IN num_prometida_ VARCHAR(100)
 )
 BEGIN
+    DECLARE id_prometido_last INT; -- Se declara antes de su uso
+
+    -- Insertar datos en la tabla prometidos_tb
     INSERT INTO prometidos_tb(usuario, pass, prometido, prometida, num_prometido, num_prometida) 
-	 VALUES (usuario_, pass_, prometido_, prometida_, num_prometido_, num_prometida_);
+    VALUES (usuario_, pass_, prometido_, prometida_, num_prometido_, num_prometida_);
+
+    -- Obtener el último ID insertado
+    SET id_prometido_last = LAST_INSERT_ID();
+
+    -- Llamar al procedimiento create_or_update_boda con el nuevo ID
+    CALL create_or_update_boda('Pendiente', NULL, NULL, 'Pendiente', NULL, NULL, 'Pendiente', id_prometido_last, 'Pendiente', 'Pendiente');
 END //
 
 DELIMITER ;
+
 
 CREATE OR REPLACE VIEW VistaPrometidos AS
 SELECT 
@@ -242,4 +254,25 @@ BEGIN
 END //
 
 DELIMITER ;
+
+SELECT id_usuario, usuario, pass
+                FROM administrador_tb
+                WHERE usuario = 'superAdmin';
+                
+SELECT * FROM prometidos_tb;
+CALL create_or_update_boda(
+    'Ceremonia elegante',        -- descripcion_ceremonia_
+    '2025-06-15 16:00:00',       -- fecha_ceremonia_
+    '2025-06-15 18:00:00',       -- fecha_fin_ceremonia_
+    'Fiesta en salón exclusivo', -- descripcion_fiesta_
+    '2025-06-15 20:00:00',       -- fecha_fiesta_
+    '2025-06-16 02:00:00',       -- fecha_fin_fiesta_
+    'Lista de regalos en Amazon',-- descripcion_regalos_
+    1,                           -- id_prometidos_
+    'Salón Royal',               -- lugar_fiesta_
+    'Iglesia San Pedro'          -- lugar_ceremonia_
+);
+SELECT * FROM boda_tb;
+SELECT * FROM invitados_tb;
+CALL create_invitado('Luis', 5, 2, '+503,69839847');
 

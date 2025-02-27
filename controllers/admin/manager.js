@@ -266,6 +266,13 @@ const openCreate = () => {
     PASS.value = contrasena;
 }
 
+/*
+*   Función asíncrona para abrir el documento relacionado a una boda.
+*   Parámetros: id (identificador del registro seleccionado).
+*/
+const openBoda = async (id) => {
+    window.open(`Invitados.html?p=${id}`, '_blank');
+}
 
 /*
 *   Función asíncrona para preparar el formulario al momento de actualizar un registro.

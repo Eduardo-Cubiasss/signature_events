@@ -30,6 +30,6 @@ LOGIN_FORM.addEventListener('submit', async (event) => {
     if (DATA.status) {
         sweetAlert(1, DATA.message, true, 'manager.html');
     } else {
-        sweetAlert(2, DATA.error, false);
+        sweetAlert(4, DATA.error, false);
     }
 });

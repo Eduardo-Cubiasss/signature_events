@@ -26,7 +26,7 @@ if (isset($_GET['action'])) {
                     $result['status'] = 1;
                     $result['message'] = 'Invitado registrado correctamente';
                 } else {
-                    $result['error'] = 'Ocurrió un problema al registrar el invitado' . $SESSION['id_prometido'];
+                    $result['error'] = 'Ocurrió un problema al registrar el invitado';
                 }
                 break;
             case 'readAll':

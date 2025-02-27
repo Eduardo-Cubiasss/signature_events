@@ -55,7 +55,8 @@ if (isset($_GET['action'])) {
                 }
                 break;
             default:
-                $result['error'] = 'Acción no disponible dentro de la sesión';
+                $result['error'] = 'Vuelve a iniciar sesión por favor';
+                session_destroy();
         }
     } else {
         // Se compara la acción a realizar cuando el administrador no ha iniciado sesión.
