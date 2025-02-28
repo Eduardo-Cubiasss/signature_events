@@ -120,7 +120,7 @@
                     </div>
                     <!-- //.align-items-center -->
 
-                    <p class="fs-5 text-center text-muted">Nos complace invitarte <p id="nombreInvitadotxt"></p> a nuestra ceremonia de boda y
+                    <p class="fs-5 text-center text-muted">Nos complace invitarte <p class="fs-5 text-center text-dark" id="nombreInvitadotxt"></p><p class="fs-5 text-center text-muted"> a nuestra ceremonia de boda y
                         posterior fiesta.</p>
 
                     <!-- Ornament -->
@@ -265,8 +265,8 @@
 
                         <div class="align-items-center d-flex mb-4">
                             <span class="icon-svg me-4"><img src="../../resources/img/icon-wedding-arch.svg" alt=""></span>
-                            <span>Iglesia Monte Cristo<br>
-                                Dirección: Calle 1234, Ciudad de México
+                            <span>Iglesia Don Rua<br>
+                                Dirección: Parroquia María Auxiliadora, Don Rúa 
                             </span>
                         </div>
                         <!-- //.align-items-center -->
@@ -276,7 +276,7 @@
                                 class="btn fs-9 ls-1 me-3">Ver mapa</button>
                             <button type="submit"
                                 class="bg-secondary border-secondary btn font-alt fs-9 rounded text-center text-white shadow"
-                                onclick="descargarICS()">
+                                onclick="RecordatorioF()">
                                 Agregar a calendario
                             </button>
                         </div>
@@ -304,8 +304,8 @@
 
                         <div class="align-items-center d-flex mb-4">
                             <span class="icon-svg me-4"><img src="../../resources/img/icon-wedding-cake.svg" alt=""></span>
-                            <span>The Mayflower Hotel<br>
-                                Dirección: Calle 5678, Ciudad de México
+                            <span>Hotel Sheraton Presidente<br>
+                                Dirección: Avenida De La Revolucion, San Salvador, El Salvador
                             </span>
                         </div>
                         <!-- //.align-items-center -->
@@ -315,7 +315,7 @@
 
                             <button type="submit"
                                 class="bg-secondary border-secondary btn font-alt fs-9 rounded text-center text-white shadow"
-                                onclick="descargarICS()">
+                                onclick="RecordatorioC()">
                                 Agregar a calendario
                             </button>
                         </div>
@@ -347,11 +347,9 @@
                             <div class="col-lg-6 mb-5 mb-lg-0">
                                 <div class="mb-4 text-center">
                                     <h4 class="font-alt fs-5 fw-bold text-primary text-uppercase">La ceremonia</h4>
-                                    <p class="font-alt fst-italic text-muted">(Iglesia Monte Cristo)</p>
-                                    <iframe class="img-fluid px-2"
-                                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3773522.3786917008!2d-102.3394573316665!3d22.538658982442335!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1ff2b77b58d11%3A0x32bcddc9490abee5!2sArquidi%C3%B3cesis%20Primada%20de%20M%C3%A9xico!5e0!3m2!1sen!2ses!4v1740219082059!5m2!1sen!2ses"
-                                        width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"
-                                        referrerpolicy="no-referrer-when-downgrade" id="lugar_ceremonia"></iframe>
+                                    <p class="font-alt fst-italic text-muted">(Don Rua)</p>
+                                    <iframe class="img-fluid px-2" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3876.114284834966!2d-89.19736372185788!3d13.711527463893772!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f6330968da10df5%3A0x66777b5998283d55!2sParroquia%20Mar%C3%ADa%20Auxiliadora%2C%20Don%20R%C3%BAa%20horario%20de%20Misas!5e0!3m2!1ses!2ses!4v1740768490900!5m2!1ses!2ses" 
+                                    width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" id="lugar_ceremonia"></iframe>
                                     <img src="../../resources/images/the-wedding-event-modal-1.jpg" alt="" class="img-fluid rounded">
                                 </div>
                                 <!-- //.mb-4 -->
@@ -361,11 +359,9 @@
                             <div class="col-lg-6">
                                 <div class="mb-4 text-center">
                                     <h4 class="font-alt fs-5 fw-bold text-primary text-uppercase">La fiesta</h4>
-                                    <p class="font-alt fst-italic text-muted">(The Mayflower Hotel)</p>
-                                    <iframe class="img-fluid px-2"
-                                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3104.8463883915674!2d-77.04247442437615!3d38.90462794627804!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89b7b7b8d962b239%3A0x2f4203e755fa6b14!2sThe%20Mayflower%20Hotel%2C%20Autograph%20Collection!5e0!3m2!1sen!2ses!4v1740218940027!5m2!1sen!2ses"
-                                        width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"
-                                        referrerpolicy="no-referrer-when-downgrade" id="lugar_ceremonia"></iframe>
+                                    <p class="font-alt fst-italic text-muted">(Hotel Sheraton Presidente)</p>
+                                    <iframe class="img-fluid px-2" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3876.4465124501007!2d-89.24433072517!3d13.691385198689932!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f63302f3458a3d1%3A0x7d58cee957bb821f!2sHotel%20Sheraton%20Presidente%20El%20salvador!5e0!3m2!1ses!2ses!4v1740768416366!5m2!1ses!2ses" 
+                                    width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" id="lugar_fiesta"></iframe>
                                     <img src="../../resources/images/the-wedding-event-modal-2.jpg" alt="" class="img-fluid rounded">
                                 </div>
 
@@ -765,12 +761,12 @@
                     </div>
                     <!-- //.mb-5 -->
 
-                    <form action="rsvp.php" method="post">
+                    <form id="updateForm">
                         <div class="row mb-3 mb-lg-4">
                             <div class="col-md-6 mb-3 mb-lg-0">
                                 <label for="rsvp-name"
                                     class="d-block font-alt fw-bold mb-2 text-uppercase">Nombres:</label>
-                                <input type="text" name="rsvp_name" id="rsvp-name" data-rules="required"
+                                <input type="text" name="nombre" id="nombre" data-rules="required"
                                     class="border border-2 font-alt p-2 rounded text-muted w-100"
                                     placeholder="Tu nombre completo">
                             </div>
@@ -779,19 +775,19 @@
                             <div class="col-md-6">
                                 <label for="rsvp-email" class="d-block font-alt fw-bold mb-2 text-uppercase">Invitados
                                     adicionales a ti:</label>
-                                <input type="number" min="0" max="100" name="rsvp_email" id="rsvp-email"
-                                    data-rules="email" class="border border-2 font-alt p-2 rounded text-muted w-100"
+                                <input type="number" min="0" max="100" name="invitadosAdicionales" id="invitados_adicionales"
+                                    class="border border-2 font-alt p-2 rounded text-muted w-100"
                                     placeholder="Cantiadad de invitados">
                             </div>
 
                             <div class="col-md-6 mb-3 mb-lg-0">
                                 <label for="rsvp-name"
                                     class="d-block font-alt fw-bold mb-2 text-uppercase">Asistencia a fiesta:</label>
-                                <select name="rsvp_events" id="rsvp-events" data-rules="required"
+                                <select name="asistenciaFiesta" id="asistenciaFiesta" data-rules="required"
                                     class="border border-2 font-alt p-2 rounded text-muted w-100">
                                     <option value="">- Por favor selecciona uno por uno -</option>
                                     <option value="Pendiente">Pendiente</option>
-                                    <option value="Asistir">Asistir</option>
+                                    <option value="Asistirá">Asistir</option>
                                     <option value="Inasistencia">Inasistencia</option>
                                 </select>
                             </div>
@@ -799,11 +795,11 @@
                             <div class="col-md-6 mb-3 mb-lg-0">
                                 <label for="rsvp-name"
                                     class="d-block font-alt fw-bold mb-2 text-uppercase">Asistencia a ceremonia</label>
-                                <select name="rsvp_events" id="rsvp-events" data-rules="required"
+                                <select name="asistenciaCeremonia" id="asistenciaCeremonia" data-rules="required"
                                     class="border border-2 font-alt p-2 rounded text-muted w-100">
                                     <option value="">- Por favor selecciona uno por uno -</option>
                                     <option value="Pendiente">Pendiente</option>
-                                    <option value="Asistir">Asistir</option>
+                                    <option value="Asistirá">Asistir</option>
                                     <option value="Inasistencia">Inasistencia</option>
                                 </select>
                             </div>
@@ -815,12 +811,12 @@
                             <div class="col-md-6 mb-3 mb-lg-0">
                                 <label for="rsvp-events"
                                     class="d-block font-alt fw-bold mb-2 text-uppercase">Eventos:</label>
-                                <select name="rsvp_events" id="rsvp-events" data-rules="required"
+                                <select name="rsvp_events" id="tipoasistencia" data-rules="required"
                                     class="border border-2 font-alt p-2 rounded text-muted w-100">
                                     <option value="">- Por favor selecciona uno por uno -</option>
-                                    <option value="Ceremony &amp; Reception">Ceremonia &amp; Fiesta</option>
-                                    <option value="Ceremony Only">Solo Ceremnonia</option>
-                                    <option value="Reception Only">Solo Fiesta</option>
+                                    <option value="Cremonia&fiesta">Ceremonia &amp; Fiesta</option>
+                                    <option value="SoloCeremonia">Solo Ceremonia</option>
+                                    <option value="SoloFiesta">Solo Fiesta</option>
                                 </select>
                             </div>
                             <!-- //.col-md-6 -->
@@ -831,7 +827,7 @@
                             <div class="12">
                                 <label for="rsvp-message" class="d-block font-alt fw-bold mb-2 text-uppercase">Deja un
                                     mensaje a la pareja:</label>
-                                <textarea name="rsvp_message" id="rsvp-message"
+                                <textarea name="mensaje" id="mensaje"
                                     class="border border-2 font-alt p-2 rounded text-muted w-100" rows="6"
                                     placeholder="¡Nos vemos allí!"></textarea>
                             </div>
@@ -882,6 +878,11 @@
     <!-- Required JS files -->
     <script src="../../resources/js/script.min.js"></script>
     <script src="../../resources/js/contador.js"></script>
+<script src="../../resources/js/main.js"></script>
+<script type="text/javascript" src="../../resources/js/sweetalert.min.js"></script>
+    <!-- Llamada al controlador general de la aplicación -->
+    <script type="text/javascript" src="../../controllers/utils/components.js"></script>
+<script src="../../controllers/invitados/invitados.js"></script>
 </body>
 
 </html>

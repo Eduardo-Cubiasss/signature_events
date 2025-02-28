@@ -52,7 +52,13 @@ class CartaInvitacionHandler
     b.fecha_fiesta,
     b.fecha_fiesta_fin,
     b.lugar_fiesta,
-    b.descripcion_regalos
+    b.descripcion_regalos,
+    i.invitados_limite,
+    i.invitacion_ceremonia,
+    i.invitacion_fiesta,
+    i.mensaje_del_invitado,
+    i.nombre_invitado,
+    i.invitados_cant
     FROM boda_tb b
     JOIN invitados_tb i ON b.id_boda = i.id_boda
     WHERE i.id_invitado = ?;';

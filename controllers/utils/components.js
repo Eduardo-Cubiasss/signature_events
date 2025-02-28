@@ -5,7 +5,7 @@
 const SERVER_URL = 'https://sig.events/signature_events/api/';
 
 // Constante para establecer la ruta de la API del developer.
-//const SERVER_URL = 'http://localhost/signature_events/api/'; 
+// const SERVER_URL = 'http://localhost/signature_events/api/'; 
 /*
 *   Función para mostrar un mensaje de confirmación.
 *   Requiere la librería sweetalert para funcionar.

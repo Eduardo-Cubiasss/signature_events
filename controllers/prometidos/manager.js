@@ -216,12 +216,14 @@ const fillTable = async (form = null) => {
     if (DATA.status) {
         // Se recorre el conjunto de registros fila por fila.
         DATA.dataset.forEach(row => {
+            var mensaje = row.mensaje_del_invitado == null ? 'Sin mensaje' : row.mensaje_del_invitado;
             // Se crean y concatenan las filas de la tabla con los datos de cada registro.
             TABLE_BODY.innerHTML += `
                 <tr>
                     <td>${row.nombre_invitado}</td>
                     <td>${row.invitacion_ceremonia}</td>
                     <td>${row.invitacion_fiesta}</td>
+                    <td>${mensaje}</td>
                     <td>${row.invitados_limite}</td>
                     <td>
                         <button type="button" class="btn btn-info" onclick="openUpdate(${row.id_invitado})">
@@ -270,6 +272,7 @@ const openBoda = async (id) => {
         ID_INVITADO_ENVIAR.value = ROW.id_invitado;
         LINK_INVITACION.value = 'https://sig.events/signature_events/views/invitados/index.html?id=' + id;
         LINK_INVITACION.disabled = false;
+        
     } else {
         sweetAlert(2, DATA.error, false);
     }

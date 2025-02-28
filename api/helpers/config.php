@@ -7,6 +7,7 @@ date_default_timezone_set('America/Mexico_City');
 // 
 
 // Credenciales para la base de datos en el servidor de desarrollo.
+
 /*
 define('SERVER', 'localhost');
 define('DATABASE', 'signature_Events');

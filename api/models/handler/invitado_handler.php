@@ -33,7 +33,8 @@ class InvitadoHandler
     i.nombre_invitado, 
     i.invitacion_ceremonia, 
     i.invitacion_fiesta, 
-    i.invitados_limite
+    i.invitados_limite,
+    i.mensaje_del_invitado
     FROM invitados_tb i
     JOIN boda_tb b ON i.id_boda = b.id_boda
 WHERE b.id_prometido = ?;
@@ -99,7 +100,8 @@ WHERE b.id_prometido = ?;
     i.nombre_invitado, 
     i.invitacion_ceremonia, 
     i.invitacion_fiesta, 
-    i.invitados_limite
+    i.invitados_limite,
+    i.mensaje_del_invitado
     FROM invitados_tb i
     JOIN boda_tb b ON i.id_boda = b.id_boda
 WHERE b.id_prometido = ?;
