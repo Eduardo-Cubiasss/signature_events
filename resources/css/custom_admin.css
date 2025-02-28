@@ -17,7 +17,16 @@
 footer {
     background-image: url("../images/bg-footer.jpg")
 }
+.colornuevo {
+    background-color: #E3D5C8 !important;
+    color: black !important;
+    border-color: #E3D5C8 !important;
+}
 
+.colornuevoTitulos {
+    background-color: #1A383A !important;
+    color: white !important;
+}
 #countdown-container {
     display: flex;
     gap: 15px;

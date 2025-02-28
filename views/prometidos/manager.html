@@ -77,11 +77,11 @@
                     </div>
                 </div>
                 <div class="col-md-2 col-sm-12">
-                    <button class="status shipped px-2" onclick="openCreate()">Agregar invitados</button>
+                    <button class="status shipped px-2 lg colornuevoTitulos" onclick="openCreate()">Agregar invitados</button>
                 </div>
             </section>
             <table>
-                <thead class="">
+                <thead class="colornuevoTitulos">
                     <tr>
                         <th> Nombre del invitado <span class="icon-arrow">&UpArrow;</span></th>
                         <th> Asistencia a fiesta <span class="icon-arrow">&UpArrow;</span></th>
@@ -152,7 +152,7 @@
         <div class="modal-dialog" role="document">
             <form id="saveForm">
                 <div class="modal-content">
-                    <div class="modal-header status delivered">
+                    <div class="modal-header status delivered colornuevo">
                         <h5 class="modal-title" id="exampleModalLabel">Agregar invitado</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
@@ -181,7 +181,7 @@
                         </div>
                     </div>
                     <div class="modal-footer">
-                        <button type="submit" class="status delivered px-4">Agregar invitado</button>
+                        <button type="submit" class="status delivered px-4 colornuevo">Agregar invitado</button>
                     </div>
                 </div>
             </form>
@@ -194,7 +194,7 @@
             <form id="enviarForm">
                 <div class="modal-content">
                     <input type="number" class="d-none" id="idInvitadoEnviar" name="id_invitado">
-                    <div class="modal-header status delivered">
+                    <div class="modal-header status delivered colornuevo">
                         <h5 class="modal-title" id="exampleModalLabel">Invitación</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close"
                             onclick="cerrarmodal3()">
@@ -221,7 +221,7 @@
                         </div>
                         <div class=" form-group input-group flex-nowrap py-3">
                             <div class="input-group-prepend">
-                                <button class="input-group-text" id="addon-wrapping" onclick="copyLink()"><svg
+                                <button class="input-group-text colornuevo" id="addon-wrapping" onclick="copyLink()"><svg
                                         xmlns="http://www.w3.org/2000/svg" width="23" height="23" fill="currentColor"
                                         class="bi bi-copy" viewBox="0 0 16 16">
                                         <path fill-rule="evenodd"

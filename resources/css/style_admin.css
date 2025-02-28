@@ -51,6 +51,10 @@ main.table {
     overflow: hidden;
 }
 
+.colornuevoTitulos{
+    background-color: #1A383A;
+    color: white;
+}
 .table__header {
     width: 100%;
     height: 10%;
@@ -144,7 +148,7 @@ thead th {
     position: -webkit-sticky;
     top: 0;
     left: 0;
-    background-color: #000000fe;
+    background-color: #1A383A;
     cursor: pointer;
     text-transform: capitalize;
 }

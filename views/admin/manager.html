@@ -62,14 +62,14 @@
             <section class="table__header row mb-3">
                 <h1 class="col-md-10 col-sm-12">Gestionar cuentas</h1>
                 <div class="col-md-2 col-sm-12">
-                    <button class="status shipped px-2" onclick="openCreate()">Agregar cuenta</button>
+                    <button class="status shipped px-2 colornuevoTitulos" onclick="openCreate()">Agregar cuenta</button>
                 </div>
                 <div class="input-group col-2 w-100 py-2">
                     <input type="search" placeholder="Buscar prometidos...">
                 </div>
             </section>
             <table>
-                <thead>
+                <thead class="colornuevoTitulos">
                     <tr>
                         <th>Usuario<span class="icon-arrow">&UpArrow;</span> </th>
                         <th>Prometid@<span class="icon-arrow">&UpArrow;</span></th>
@@ -90,7 +90,7 @@
         <div class="modal-dialog" role="document">
             <form id="updateForm">
                 <div class="modal-content">
-                    <div class="modal-header status delivered">
+                    <div class="modal-header status delivered colornuevo">
                         <h5 class="modal-title" id="exampleModalLabel">Editar información</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
@@ -140,7 +140,7 @@
             </form>
         </div>
         <div class="modal-footer">
-            <button type="submit" class="status delivered px-4">Guardar cambios</button>
+            <button type="submit" class="status delivered px-4 colornuevo">Guardar cambios</button>
             <button type="button" class="status shipped px-4">Enviar credenciales a los prometidos</button>
             <figure class="text-end">
                 <blockquote class="blockquote">
@@ -160,7 +160,7 @@
         aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
-                <div class="modal-header status delivered">
+                <div class="modal-header status delivered colornuevo">
                     <h5 class="modal-title" id="exampleModalLabel">Agregar cuenta</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
@@ -217,7 +217,7 @@
                             </div>
                         </div>
                         <div class="modal-footer">
-                            <button type="submit" class="status delivered px-4">Crear cuenta</button>
+                            <button type="submit" class="status delivered px-4 colornuevo">Crear cuenta</button>
                         </div>
                         <p class="text-end px-2"><small>¡No te preocupes, Las credenciale serán enviadas a los
                                 prometidos!</small></p>

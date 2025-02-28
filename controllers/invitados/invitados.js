@@ -39,6 +39,11 @@ var TITULO_c,
     FECHAFINAL_c;
 // Método del evento para cuando el documento ha cargado.
 document.addEventListener('DOMContentLoaded', () => {
+    const audio = document.getElementById("background-music");
+        // Intenta reproducir el audio
+        audio.play().catch(error => {
+            console.log("Reproducción automática bloqueada, esperando interacción del usuario.");
+        });
     // Llamada a la función para llenar la tabla con los registros existentes.
     openUpdate();
 

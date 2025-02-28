@@ -18,13 +18,19 @@ footer {
     background-image: url("../images/bg-footer.jpg")
 }
 
+.colornuevo {
+    background-color: #E3D5C8 !important;
+    color: black !important;
+    border-color: #E3D5C8 !important;
+}
+
 /* Estilo general */
 #countdown-container {
     display: flex;
     gap: 20px;
     padding: 20px;
-    background-color: #ae9073;
-    color: white;
+    background-color: #E3D5C8;
+    color: black;
     text-align: center;
     flex-wrap: nowrap; /* Evita columnas en PC */
     flex-direction: row;
